@@ -169,6 +169,22 @@ a.fa.fa-angle-down:hover{
 	color: #ffffff;
 	border: 2px solid #FC4545;
 }
+
+/* feedback Section */
+.feedback h5 {
+	background: #FC4545;
+	padding:20px 40px;
+	margin:0px 10px;
+	font-weight:300px;
+	
+}
+
+.feedback p {
+	text-align:right;
+	padding-right:10px;
+}
+
+
 /* About Section */
 #tf-about{
 	padding: 80px 0;
@@ -176,7 +192,7 @@ a.fa.fa-angle-down:hover{
 
 ul.about-list{ 
 	margin: 30px 0 0 ;
-	width:200px;
+	
 }
 ul.about-list li{
 	text-align: left;
@@ -191,6 +207,7 @@ ul.about-list .al-header {
 	font-weight: bold;
 	font-style: normal  !important;
 	font-size: 17px;
+	width:200px;
 	
 }
 
