@@ -237,7 +237,7 @@ ul.about-list li span{
 
 /* Team Section */
 #tf-team{
-	background: url(../img/03.jpg);
+	background: url(../img/14695836064_201297f837_o.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -420,6 +420,15 @@ img.img-circle.team-img {
     color: #FFF;
     text-align: center;
 }
+#clients .item {
+	border-bottom: 4px solid transparent;
+    padding-bottom: 10px;
+	
+}
+
+#clients .item:hover {
+	border-bottom: 4px solid #FC4545;
+}
 
 .logo-list{
 	width:100%;
@@ -427,12 +436,19 @@ img.img-circle.team-img {
 
 #logo-list .item {
 	float:left;
-	
-    
 	margin:30px 64px;
+}
+
+#logo-list .item img {
+
+	border-bottom: 4px solid transparent;
+    padding-bottom: 10px;
 	
 }
 
+#logo-list .item img:hover{
+	border-bottom: 4px solid #FC4545;
+}
 
 /* Gallery Section 
 ==============================*/
@@ -630,7 +646,7 @@ ol.type li a.active { font-weight: 700; }
 }
 /* Testimonials Section */
 #tf-testimonials{
-	background: url(../img/05.jpg);
+	background: url(../img/Fotolia_84568367_S_copyright.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
