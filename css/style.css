@@ -179,6 +179,18 @@ a.fa.fa-angle-down:hover{
 	
 }
 
+.feedback h5:before{
+	content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 26px;
+    top: 100px;
+    border: 8px solid;
+    border-color: #FC4545 #FC4545 transparent rgba(252, 69, 69, 0);
+	
+}
+
 .feedback p {
 	text-align:right;
 	padding-right:10px;
@@ -209,6 +221,14 @@ ul.about-list .al-header {
 	font-size: 17px;
 	width:200px;
 	
+}
+
+.about-list a{
+	color: rgb(90, 90, 90);
+}	
+
+.about-list a:hover{
+	color: #FC4545;
 }
 
 ul.about-list li span{ 
@@ -411,13 +431,14 @@ ul.cat li{
 ol.type li{
 	display: inline-block;
 	margin-left: 20px;
+	
 }
 ol.type li:after{
 	content: ' | ';
 	margin-left: 20px;
 }
 ol.type li:last-child:after { content: ''; }
-ol.type li a{ color: #222222}
+ol.type li a{ color: #666}
 ol.type li a.active { font-weight: 700; }
 .isotope-item { z-index: 2 }
 .isotope-hidden.isotope-item { z-index: 1 }
@@ -539,11 +560,12 @@ ol.type li a.active { font-weight: 700; }
 	margin: 0 auto;
 	color: #ffffff;
 	background: rgba(0, 0, 0, 0.66);
-	padding: 25% 0;
+	padding: 25% 10px;
 	height: 100%;
 	width: 100%;
 	opacity: 0;
     transition: all 0.5s;
+	
 }
 .hover-bg .hover-text>h4{
 	opacity: 0;
@@ -571,7 +593,12 @@ ol.type li a.active { font-weight: 700; }
 }
 .hover-bg:hover .hover-text{
 	opacity: 1;
+	background-color:#FC4545;
 }
+
+.hover-bg:hover 
+
+
 #tf-works i.fa {
 	height: 30px;
 	width: 30px;
