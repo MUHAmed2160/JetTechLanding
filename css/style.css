@@ -142,6 +142,8 @@ font-weight: 900;
 #tf-home p.lead{
 	color: #fff;
 	text-shadow: 0.0em 0.0em 1.0em black;
+	margin-bottom: 7px;
+
 }
 
 .content{
