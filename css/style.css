@@ -386,6 +386,10 @@ img.img-circle.team-img {
 	 line-height: 1.5;
 }
 
+.service p{
+	text-align:left;
+}
+
 /* Clients Section */
 #tf-clients{
 	background: url(../img/04.jpg);
