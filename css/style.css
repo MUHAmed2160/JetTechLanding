@@ -173,13 +173,27 @@ a.fa.fa-angle-down:hover{
 #tf-about{
 	padding: 80px 0;
 }
-ul.about-list{ margin: 30px 0 0 ;}
+
+ul.about-list{ 
+	margin: 30px 0 0 ;
+	width:200px;
+}
 ul.about-list li{
+	text-align: left;
 	display: block;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 30px;
 	font-family: 'Open Sans', sans-serif;
 }
+ul.about-list .al-header {
+	color: #FC4545;
+	font-family: Lato, sans-serif;
+	font-weight: bold;
+	font-style: normal  !important;
+	font-size: 17px;
+	
+}
+
 ul.about-list li span{ 
 	margin-right: 10px;
 }
