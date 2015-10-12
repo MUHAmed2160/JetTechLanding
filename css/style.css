@@ -420,6 +420,20 @@ img.img-circle.team-img {
     color: #FFF;
     text-align: center;
 }
+
+.logo-list{
+	width:100%;
+}
+
+#logo-list .item {
+	float:left;
+	
+    
+	margin:30px 64px;
+	
+}
+
+
 /* Gallery Section 
 ==============================*/
 #tf-works{
