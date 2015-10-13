@@ -385,11 +385,11 @@ img.img-circle.team-img {
 .service p{
 	font-size: 21px;
 	 line-height: 1.5;
+	 text-align:left;
 }
 
-.service p{
-	text-align:left;
-	padding-left: 14px;
+.servicelist p{
+	padding-left: 30px;
 }
 
 .col-service {
@@ -405,6 +405,8 @@ img.img-circle.team-img {
 	width:600px;
 	margin: auto;
 }
+
+
 
 /*Vertical Line section*/
 
