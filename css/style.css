@@ -352,6 +352,7 @@ img.img-circle.team-img {
 	border-radius: 50%;
 	transition: all 0.5s;
 	color: #FC4545;
+	margin-top: 14px;
 	
 }
 
@@ -365,7 +366,8 @@ img.img-circle.team-img {
 	border: 0;
 	transition: all 0.5s;
 	color: #FC4545;
-	margin-left: -14px;
+	margin-left:-10px;
+	margin-top:5px;
 
 }
 
@@ -398,11 +400,12 @@ img.img-circle.team-img {
 
 .col-service h4{
 	text-align:left;
+	margin-left:120px;
 }
 
 .col-service i {
 	float:left;
-	margin-left: -128px;
+	
 }
 
 .col-service-in {
@@ -412,10 +415,16 @@ img.img-circle.team-img {
 
 .col-text {
 	
-	margin: auto;
+	margin-left:131px;	
 }
 
+.col-text .service-list-header {
+	margin-left:-11px;
+}
 
+.col-text .fa-angle-down {
+	margin-
+}
 
 /*Vertical Line section*/
 
