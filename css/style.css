@@ -383,7 +383,7 @@ img.img-circle.team-img {
 }
 
 .service p{
-	font-size: 21px;
+	font-size: 16px;
 	 line-height: 1.5;
 	 text-align:left;
 }
@@ -396,13 +396,22 @@ img.img-circle.team-img {
 	width:100%;
 }
 
+.col-service h4{
+	text-align:left;
+}
+
+.col-service i {
+	float:left;
+	margin-left: -128px;
+}
+
 .col-service-in {
-	width:100%;
+	width:50%;
 	margin-bottom:50px;
 }
 
 .col-text {
-	width:600px;
+	
 	margin: auto;
 }
 
