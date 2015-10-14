@@ -88,6 +88,9 @@ ul, ol{
 	height:80px;
 }
 
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse{
+max-height: 400px;
+}
 
 #tf-menu a.navbar-brand {
 	text-transform: uppercase;
@@ -136,6 +139,7 @@ ul, ol{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	color: #fff;
+	height:650px;
 }
 
 #tf-home .overlay{
@@ -148,7 +152,20 @@ ul, ol{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
 	height: 750px;
 	background-attachment: fixed;
+	height:650px;
 }
+
+@media(min-width:768px) {
+	#tf-home{
+		height:750px;
+	}
+
+	#tf-home .overlay{
+		height:750px;
+	}
+}
+
+
 #tf-home p.lead{
 	color: #fff;
 	text-shadow: 0.0em 0.0em 1.0em black;
@@ -171,7 +188,7 @@ a.fa.fa-angle-down {
 	border: 2px solid #b4b4b4;
 	border-radius: 50%;
 	font-size: 24px;
-	margin-top: 200px;
+	margin-top: 100px;
 	transition: all 0.5s;
 }
 a.fa.fa-angle-down:hover{
@@ -418,6 +435,7 @@ img.img-circle.team-img {
 
 .col-service i {
 	float:left;
+
 	
 }
 
@@ -681,6 +699,7 @@ img.img-circle.team-img {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
 	padding: 80px 0;
 	background-attachment: fixed;
+
 }
 
 #clients .item{
