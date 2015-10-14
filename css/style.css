@@ -372,11 +372,11 @@ img.img-circle.team-img {
 }
 
 #tf-services i.fa {
-	font-size: 40px;
+	font-size: 30px;
 	border: 4px solid #FC4545;
-	width: 100px;
-	height: 100px;
-	padding: 27px 25px;
+	width: 75px;
+	height: 75px;
+	padding: 19px 20px;
 	margin-bottom: 10px;
 	border-radius: 50%;
 	transition: all 0.5s;
@@ -432,7 +432,7 @@ img.img-circle.team-img {
 
 .col-service h4{
 	text-align:left;
-	margin-left:120px;
+	margin-left:100px;
 }
 
 .col-service i {
@@ -447,7 +447,7 @@ img.img-circle.team-img {
 
 .col-text {
 	
-	margin-left:131px;	
+	margin-left:111px;	
 }
 
 .col-text .service-list-header {
@@ -1155,6 +1155,46 @@ nav#footer p{
 	#logo-list .item {
 		width: 15%;
 	}
+	
+	#tf-services i.fa {
+	font-size: 40px;
+	border: 4px solid #FC4545;
+	width: 100px;
+	height: 100px;
+	padding: 27px 25px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	color: #FC4545;
+	margin-top: 14px;
+	
+	
+	
+}
+
+#tf-services p i.fa {
+	font-size: 15px;
+	border: 4px solid #FC4545;
+	width: 10px;
+	height: 10px;
+	padding: 0px 0px;
+	margin-bottom: 0px;
+	border: 0;
+	transition: all 0.5s;
+	color: #FC4545;
+	margin-left:-10px;
+	margin-top:5px;
+
+}
+
+.col-service h4{
+	text-align:left;
+	margin-left:120px;
+}
+
+.col-text {
+    margin-left: 131px;
+}
 }
 
 @media(min-width:992px) {
@@ -1204,6 +1244,45 @@ nav#footer p{
     margin-bottom: 36px;
     margin-left: 2.5px;
 }
+#tf-services i.fa {
+	font-size: 40px;
+	border: 4px solid #FC4545;
+	width: 100px;
+	height: 100px;
+	padding: 27px 25px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	color: #FC4545;
+	margin-top: 14px;
+	
+	
+	
+}
+
+#tf-services p i.fa {
+	font-size: 15px;
+	border: 4px solid #FC4545;
+	width: 10px;
+	height: 10px;
+	padding: 0px 0px;
+	margin-bottom: 0px;
+	border: 0;
+	transition: all 0.5s;
+	color: #FC4545;
+	margin-left:-10px;
+	margin-top:5px;
+
+}
+
+.col-service h4{
+	text-align:left;
+	margin-left:120px;
+}
+
+.col-text {
+    margin-left: 131px;
+}
 }
 
 @media(min-width:1200px) {
@@ -1250,5 +1329,45 @@ nav#footer p{
 	
 	.contacts-card-text ul {
     min-width: 200px;
+}
+
+#tf-services i.fa {
+	font-size: 40px;
+	border: 4px solid #FC4545;
+	width: 100px;
+	height: 100px;
+	padding: 27px 25px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	color: #FC4545;
+	margin-top: 14px;
+	
+	
+	
+}
+
+#tf-services p i.fa {
+	font-size: 15px;
+	border: 4px solid #FC4545;
+	width: 10px;
+	height: 10px;
+	padding: 0px 0px;
+	margin-bottom: 0px;
+	border: 0;
+	transition: all 0.5s;
+	color: #FC4545;
+	margin-left:-10px;
+	margin-top:5px;
+
+}
+
+.col-service h4{
+	text-align:left;
+	margin-left:120px;
+}
+
+.col-text {
+    margin-left: 131px;
 }
 }
