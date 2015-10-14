@@ -569,6 +569,7 @@ img.img-circle.team-img {
     }
 
     .timeline>li {
+    .timeline>li {
         margin-bottom: 0px;
         min-height: 0px;
     }
@@ -1209,7 +1210,11 @@ nav#footer p{
     font-size: 22px;
 }
 	
-
+.timeline:before {
+    left: 50%;
+    margin-bottom: 36px;
+    margin-left: -2.5px;
+}
 
     .timeline>li .timeline-image h4 {
         margin-top: 40px;
