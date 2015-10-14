@@ -239,7 +239,7 @@ ul.about-list li span{
 
 /* Team Section */
 #tf-team{
-	background: url(../img/14695836064_201297f837_o.jpg);
+	background: url(../img/air-show-694807.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -625,10 +625,7 @@ img.img-circle.team-img {
         margin-left: -42.5px;
     }
 	
-	.timeline>li .timeline-image:hover{
-		width: 87px;
-        height: 87px;
-	}
+
 
     .timeline>li .timeline-image h4 {
         margin-top: 40px;
@@ -649,7 +646,7 @@ img.img-circle.team-img {
 
 /* Clients Section */
 #tf-clients{
-	background: url(../img/04.jpg);
+	background: url(../img/maritime-6475.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -901,7 +898,7 @@ ol.type li a.active { font-weight: 700; }
 }
 /* Testimonials Section */
 #tf-testimonials{
-	background: url(../img/Fotolia_84568367_S_copyright.jpg);
+	background: url(../img/keyboard-932830.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
