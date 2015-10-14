@@ -84,22 +84,26 @@ ul, ol{
 }
 
 .navbar-header {
-	padding:20px;
+	padding:0px;
+	height:80px;
 }
 
 
 #tf-menu a.navbar-brand {
-text-transform: uppercase;
-font-size: 22px;
-color: #fff;
-font-weight: 900;
+	text-transform: uppercase;
+	font-size: 22px;
+	color: #fff;
+	font-weight: 900;
+	height:80px;
 }
+
 
 #tf-menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
 	color: #FFF;
 	font-size: 12px;
 	letter-spacing: 1px;
+	line-height:50px;
 }
 .on {
 	background-color: #222222 !important;
@@ -114,11 +118,12 @@ font-weight: 900;
 
 .navbar-toggle {
 	border-radius: 0;
+	margin:23px;
 	}
-.navbar-default .navbar-toggle:hover, 
-.navbar-default .navbar-toggle:focus {
-	background-color: #FC4545;
-	border-color: #FC4545;
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+		background-color: #FC4545;
+		border-color: #FC4545;
 	}
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
@@ -551,6 +556,103 @@ img.img-circle.team-img {
     margin-bottom: 0;
 }
 
+
+@media(min-width:768px) {
+
+	.col-service-in {
+		width:50%;
+		margin-bottom:50px;
+	}
+    .timeline:before {
+        left: 50%;
+		margin-bottom: 10px;
+    }
+
+    .timeline>li {
+        margin-bottom: 0px;
+        min-height: 0px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 75px;
+        height: 75px;
+        margin-left: -32.5px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media(min-width:1200px) {
+
+
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 85px;
+        height: 85px;
+        margin-left: -42.5px;
+    }
+	
+
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
 
 .timeline>li .timeline-image i{
 	font-size:18px;
