@@ -10,6 +10,7 @@ body, html{
 
 h1{
 	text-transform: uppercase;
+	
 }
 h1 strong{
 	word-spacing: 15px;
@@ -1065,7 +1066,7 @@ label {
 #tf-contact .contacts-card{
 	width:30%;
 	display: inline-block;
-	min-width: 200px;
+	min-width: 270px;
 	vertical-align:top;
 }
 
