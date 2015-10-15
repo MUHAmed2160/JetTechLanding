@@ -241,7 +241,10 @@ ul.about-list li{
 	font-size: 15px;
 	line-height: 30px;
 	font-family: 'Open Sans', sans-serif;
+
 }
+
+
 ul.about-list .al-header {
 	color: #FC4545;
 	font-family: Lato, sans-serif;
@@ -884,6 +887,7 @@ ol.type li a.active { font-weight: 700; }
 	position: relative;
 }
 
+
 .hover-bg .hover-text {
 	position: absolute;
 	text-align: center;
@@ -1026,9 +1030,10 @@ label {
 }
 
 #tf-contact .contacts-card{
-	width:50%;
-	float:left;
-	min-width: 350px;
+	width:30%;
+	display: inline-block;
+	min-width: 300px;
+	vertical-align:top;
 }
 
 #tf-contact .contacts-card img {
