@@ -880,11 +880,37 @@ ol.type li a.active { font-weight: 700; }
 }
 .portfolio-item{
 	margin-bottom: 30px;
+	box-shadow: 1px 1px 5px 0px #000;
 }
 .portfolio-item .hover-bg{
 	height: 260px;
 	overflow: hidden;
 	position: relative;
+}
+
+.portfolio-item-marker{
+	position: absolute;
+	left: 0;
+	top: 22px;
+	background-color: #FC4545;
+	z-index: 1;
+	padding: 5px 10px;
+	color: #fff;
+}
+
+/*<div style="
+    position: absolute;
+    left: 0;
+    top: 22px;
+    background-color: #FC4545;
+    z-index: 1;
+    padding: 5px 10px;
+    color: #fff;
+">WEB</div>*/
+
+@media(max-height: 768px)
+{
+	/*IIIIIIIIIIIII*/
 }
 
 
