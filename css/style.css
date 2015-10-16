@@ -233,15 +233,17 @@ a.fa.fa-angle-down:hover{
 }
 
 ul.about-list{ 
-	
+	    padding-left: 32px;
 	
 }
 ul.about-list li{
-	text-align: left;
-	display: block;
-	font-size: 15px;
-	line-height: 30px;
-	font-family: 'Open Sans', sans-serif;
+text-align: left;
+    display: block;
+    font-size: 1.5em;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+   /* font-weight: bold;*/
+    margin-bottom: 20px;
 
 }
 
@@ -252,8 +254,6 @@ ul.about-list .al-header {
 	font-weight: bold;
 	font-style: normal  !important;
 	font-size: 17px;
-	
-	
 }
 
 .about-list a{
@@ -264,9 +264,11 @@ ul.about-list .al-header {
 	color: #FC4545;
 }
 
-ul.about-list li span{ 
-	margin-right: 10px;
+li contact-text{
+	font-size:14px;
+	margin-bottom:0px;
 }
+
 
 /* Team Section */
 #tf-team{

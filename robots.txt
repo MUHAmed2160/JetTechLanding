@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://jettech.jt.jetstyle.ru/sitemap.xml
