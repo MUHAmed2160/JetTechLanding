@@ -666,7 +666,7 @@ img.img-circle.team-img {
         height: 85px;
         margin-left: -42.5px;
     }
-	
+
 
 
     .timeline>li .timeline-image h4 {
@@ -1143,6 +1143,14 @@ nav#footer p{
 	border-color: #FC4545;
 	color: #ffffff;
 }
+
+@media(min-width:768px) and (max-width:992px)
+{
+	.col-service-in{
+		max-height:240px;
+	}
+}
+
 @media(min-width:768px) {
 
 	.col-service-in {
