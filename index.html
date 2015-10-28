@@ -27,6 +27,7 @@
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/awesome-bootstrap-checkbox.css ">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
 	<!-- Slider
@@ -40,7 +41,8 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
 	<!--	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,800,400,100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
 
 	<!-- РАшн шрифтики -->
 	<!--	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
@@ -56,163 +58,267 @@
     <![endif]-->
 </head>
 
-<body data-bind="css:{comboSelectorPopup_show:comboPopupOpen}">
-<div class="pageWrapper">
-	<div class="page ContactForm bottomFixed  " >
-		<div class="container">
-			<div>
-				<div class="project-manager-budget pull-right">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="">
-								Your Estimated Budget
-								<i class="icon icon-circle-question js-tooltip" data-toggle="tooltip" data-tooltip-placement="bottom" title="" data-original-title="This is our estimate based on your current selections. We will work with you to refine this, and there are generally options for both more and less."></i>
-							</div>
-							<h3 class="text-muted">
+<body data-bind="css:{comboSelectorPopup_show:comboPopupOpen,scrolled:scrolled}">
+	<div class="pageWrapper">
+		<div class="page ContactForm bottomFixed  ">
+			<div class="container">
+				<div>
+					<div class="project-manager-budget pull-right">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="">
+									Your Estimated Budget
+									<i class="icon icon-circle-question js-tooltip" data-toggle="tooltip" data-tooltip-placement="bottom" title="" data-original-title="This is our estimate based on your current selections. We will work with you to refine this, and there are generally options for both more and less."></i>
+								</div>
+								<h3 class="text-muted">
                                             <span class="text-muted eta"><em>Continue to get estimate</em></span>
                                     </h3>
+							</div>
 						</div>
 					</div>
+
+
+
+					<!--					<h3 class="text-primary">Start Your Project</h3>-->
+					<h3 class="text-primary">Начните свой проект</h3>
+
+
+					<!--
+					<p>Just a few quick questions and we'll introduce you
+						<br>to the professional you never knew you needed</p>
+-->
+
+					<p>Всего несколько вопросов помогут вам понять масштаб бедствия :)</p>
 				</div>
-
-
-	
-					<h3 class="text-primary">Start Your Project</h3>
-
-
-				<p>Just a few quick questions and we'll introduce you
-					<br>to the professional you never knew you needed</p>
-			</div>
-			<hr>
-			<form method="post" accept-charset="utf-8" action="/submit_new_project?type=something_else" style="max-width:800px">
-				<div style="display:none;">
-					<input type="hidden" name="_method" value="POST" class="form-control">
-				</div>
-				<input type="hidden" name="submission[scale]" value="new" class="form-control">
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="form-group text required">
-										<label for="po-user-user-profile-first-name">First Name</label>
-										<input type="text" name="po_user[user_profile][first_name]" class="form-control" placeholder="Jack" required="required" maxlength="45">
+				<hr>
+				<form accept-charset="utf-8" style="max-width:800px">
+					<div style="display:none;">
+						<input type="hidden" name="_method" value="POST" class="form-control">
+					</div>
+					<input type="hidden" name="submission[scale]" value="new" class="form-control">
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="form-group text required">
+											<label for="po-user-user-profile-first-name">Имя</label>
+											<input type="text" class="form-control" placeholder="" required="required" maxlength="45">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="form-group text">
+											<label for="po-user-user-profile-last-name">Фамилия</label>
+											<input type="text" name="po_user[user_profile][last_name]" class="form-control" placeholder="" maxlength="45" >
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="form-group text">
-										<label for="po-user-user-profile-last-name">Last Name</label>
-										<input type="text" name="po_user[user_profile][last_name]" class="form-control" placeholder="Frost" maxlength="45" id="po-user-user-profile-last-name">
-									</div>
+
+							<div class="form-group">
+								<div class="form-group text required">
+									<label for="po-user-username">Email</label>
+									<input type="text" name="po_user[username]" class="form-control" placeholder="" required="required" maxlength="255" >
 								</div>
 							</div>
-						</div>
 
-						<div class="form-group">
-							<div class="form-group text required">
-								<label for="po-user-username">Email</label>
-								<input type="text" name="po_user[username]" class="form-control" placeholder="jack.frost@gomoodboard.com" required="required" maxlength="255" id="po-user-username">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label>I need work done on</label>
-<!--							optionsText: 'countryName',-->
-							<select  data-bind="
+							<div class="form-group">
+								<!--								<label>I need work done on</label>-->
+								<label>Мне нужно создать</label>
+								<!--							optionsText: 'countryName',-->
+								<!--
+								<select data-bind="
 							options: serviceTypes,
 							
 							value: serviceTypeSelected,
 							optionsCaption: 'Choose...' " class="form-control">
-							</select>
+								</select>
+-->
+							</div>
+							<!--
+
+							<div class="form-group">
+								<label>
+									<input type="checkbox"> Дизайн</label>
+
+							</div>
+-->
+
+							<script type="text/html" id="calcGroup">
+								<ul class="list-group form-group" style="    color: #333;    clear: both;" data-bind="foreach:$data">
+									<li class="list-group-item" data-bind="toggleClick:checked,css:checked()? 'activecheck':'' ">
+										<i class="fa fa-check" 1data-bind="css:checked()?" 1data-bind="css:checked()?'fa-check':'fa-square-o' "></i> <span class="list-group-item-label" data-bind=" text:label"></span>
+										<div class="childrenGroup" data-bind="visible:checked && checked() && $data.children">
+											<!-- ko template:{name:'calcGroup', data:$data.children} -->
+											<!-- /ko-->
+										</div>
+									</li>
+								</ul>
+							</script>
+
+
+							<div class="form-group projectCalc">
+								<!-- ko template:{name:'calcGroup',data:m_calc} -->
+								<!-- /ko-->
+
+							</div>
+
+
+<!--
+
+							<div class="form-group">
+								<ul class="list-group form-group" style="    color: #333;    clear: both;">
+									<li class="list-group-item" data-bind="toggleClick:sitecheck1,css:sitecheck1()? 'active':'' ">
+										<i class="fa"></i> Сайт
+										<ul class="1list-group form-group" style="    color: #333;    clear: both;" data-bind="visible:sitecheck1">
+											<li class="list-group-item">концепция
+
+												<ul class="1list-group form-group" style="    color: #333;    clear: both;">
+													<li class="list-group-item">концепция</li>
+													<li class="list-group-item">красивый дизайн + верстка</li>
+													<li class="list-group-item">удобная админка</li>
+												</ul>
+
+											</li>
+											<li class="list-group-item">красивый дизайн + верстка</li>
+											<li class="list-group-item">удобная админка</li>
+										</ul>
+									</li>
+									<li class="list-group-item">мобильное приложение
+										<ul class="1list-group form-group" style="    color: #333;    clear: both;">
+											<li class="list-group-item">концепция</li>
+											<li class="list-group-item">красивый дизайн + верстка</li>
+											<li class="list-group-item">удобная админка</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+-->
+							<!--
+
+							<div class="form-group">
+<div class="checkbox checkbox-primary">
+2
+  <input id="checkbox" type="checkbox" checked>
+3
+</div>
+4
+ 
+5
+<div class="checkbox checkbox-success">
+6
+  <input id="checkbox" type="checkbox">
+7
+</div>
+
+							</div>
+-->
+
+							<!--							веб-сайт
+ концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
+ красивый дизайн + верстка += 150000
+ очуменный дизайн +=150000
+ удобная админка +=100000
+ прием платежей (visa/mastercard etc) +=100000
+ интеграция с по клиента (1с/базы данных/другие api) +=100000
+ высокая нагрузка (более ??? посетителей в сутки/одновременных) +=100000
+
+мобильное приложение
+ концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
+ платформа android +=120000
+ платформа ios +=180000
+ очуменный дизайн +=100000
+ фоновая геолокация +=150000
+ push-уведомления +=100000-->
+
+							<div class="form-group md-margin-top-large">
+								<input type="submit" value="Continue" class="btn btn-primary btn-lg btn-block xs-margin-top-large">
+								<!--								<a class="btn btn-primary btn-lg" HREF="mailto:?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/">Write us</a>-->
+							</div>
+
+							<p class="paragraph-small zeta text-center">
+								By clicking on "Continue", you agree to the <a href="/terms" target="_blank">Terms &amp; Conditions</a>.
+							</p>
+
 						</div>
-
-						<div class="form-group md-margin-top-large">
-							<input type="submit" value="Continue" class="btn btn-primary btn-lg btn-block xs-margin-top-large">
+						<div class="col-sm-4">
+							<!--						<img class="pull-right" src="/img/work-on-projects.png" style="max-width: 180px;">-->
 						</div>
-
-						<p class="paragraph-small zeta text-center">
-							By clicking on "Continue", you agree to the <a href="/terms" target="_blank">Terms &amp; Conditions</a>.
-						</p>
-
 					</div>
-					<div class="col-sm-4">
-<!--						<img class="pull-right" src="/img/work-on-projects.png" style="max-width: 180px;">-->
-					</div>
+
+				</form>
+
+
+			</div>
+		</div>
+
+		<!-- Navigation
+    ==========================================-->
+		<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top on">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand " href="#Main" style="margin-top: 5px;"><img src="img/jtlogo_200px_white.png">
+					</a>
 				</div>
 
-			</form>
-
-
-		</div>
-	</div>
-
-	<!-- Navigation
-    ==========================================-->
-	<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top on">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand " href="#tf-home" style="margin-top: 5px;"><img src="img/jtlogo2.jpg">
-				</a>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<!--<li><a href="#Main" class="page-scroll">Начало</a></li>-->
+						<li><a href="#tf-services" class="page-scroll">Услуги</a>
+						</li>
+						<!--<li><a href="#tf-team" class="page-scroll">Команда</a></li>-->
+						<li><a href="#tf-process" class="page-scroll">Процесс</a>
+						</li>
+						<li><a href="#tf-clients" class="page-scroll">Клиенты</a>
+						</li>
+						<li><a href="#tf-works" class="page-scroll">Портфолио</a>
+						</li>
+						<li><a href="#tf-testimonials" class="page-scroll">Отзывы</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
 			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<!--<li><a href="#tf-home" class="page-scroll">Начало</a></li>-->
-					<li><a href="#tf-services" class="page-scroll">Услуги</a>
-					</li>
-					<!--<li><a href="#tf-team" class="page-scroll">Команда</a></li>-->
-					<li><a href="#tf-process" class="page-scroll">Процесс</a>
-					</li>
-					<li><a href="#tf-clients" class="page-scroll">Клиенты</a>
-					</li>
-					<li><a href="#tf-works" class="page-scroll">Портфолио</a>
-					</li>
-					<li><a href="#tf-testimonials" class="page-scroll">Отзывы</a>
-					</li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
+			<!-- /.container-fluid -->
+		</nav>
 
 
-	<div class="page Main  ">
-		<div class="comboSelectorPopupOverlay" data-bind="click:comboPopupOpen(false)"> </div>
-		<!-- Home Page
+		<div class="page Main  ">
+			<div class="comboSelectorPopupOverlay" data-bind="click:comboPopupOpen(false)"> </div>
+			<!-- Home Page
     ==========================================-->
-		<section id="tf-home" class="dark text-center">
-			<div class="overlay">
-				<div class="content">
+			<section id="tf-home" class="dark text-center">
+				<div class="overlay">
+					<div class="content">
 
-					<h1 style="    padding-bottom: 80px;">Софт прямыми руками</h1>
-					<div class="lead">Создайте ваш
-						<div class="comboSelector" data-bind="toggleClick:comboPopupOpen"><span data-bind="text:serviceTypeSelected">сайт</span>
-
-
-							<ul class="comboSelectorPopupBlock" data-bind="foreach:serviceTypes">
-								<li data-bind="text:$data, click:function(){m_site.serviceTypeSelected($data)}">вебсайт</li>
-
-							</ul>
+						<h1 style="    padding-bottom: 80px;">Софт прямыми руками</h1>
+						<div class="lead">Создайте ваш
+							<div class="comboSelector" data-bind="toggleClick:comboPopupOpen"><span data-bind="text:serviceTypeSelected">сайт</span>
 
 
+								<ul class="comboSelectorPopupBlock" data-bind="foreach:serviceTypes">
+									<li data-bind="text:$data, click:function(){m_site.serviceTypeSelected($data)}">вебсайт</li>
+
+								</ul>
+
+
+							</div>
 						</div>
-					</div>
-					<!--<p class="lead">Создаем IT-продукты</p> <p class="lead">Легки в общении </p> <p class="lead">Увесистое портфолио</p>-->
-					<!--<a href="#tf-services" class="fa fa-angle-down page-scroll" ></a>-->
-					<!---->
+						<!--<p class="lead">Создаем IT-продукты</p> <p class="lead">Легки в общении </p> <p class="lead">Увесистое портфолио</p>-->
+						<!--<a href="#tf-services" class="fa fa-angle-down page-scroll" ></a>-->
+						<!---->
 
-					<!--
+						<!--
                 <div class="col-sm-12 center-block text-center">
                     <form method="get" accept-charset="utf-8" id="nl-form" class="nl-form beta no-underline" action="/submit_new_project">                <span class="text-shadow">Find someone to work on</span>
                     <div class="clearfix visible-xs xs-margin-bottom"></div>
@@ -229,164 +335,195 @@
                     </form>
                 </div>
 -->
-<a href="#ContactForm" style="    font-size: xx-large;    padding: 10px 50px;" class="btn btn-primary " >Начать</a>
+						<a href="#ContactForm" style="    font-size: xx-large;    padding: 10px 50px;    margin-top: 20px;" class="btn btn-primary ">Начать</a>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Services Section
+			<!-- Services Section
       ==========================================-->
-		<section id="tf-services" class="text-center">
-			<div class="container">
-				<div class="section-title center">
-					<h2> Делайте софт c нами</h2>
-					<div class="line">
-						<hr>
-					</div>
-					<div class="clearfix"></div>
-					<ul class="about-list">
-						<li>
-							<span class="fa fa-check"></span> Веб, мобильные платформы, соц. сети, ТВ, корпоративный софт
-						</li>
-						<li>
-							<span class="fa fa-check"></span> Клиенты - от стартапов до Microsoft и SAP
-						</li>
-						<li>
-							<span class="fa fa-check"></span> Node.JS/ MongoDB/ KnockoutJS/ PhoneGap/ JavaScript/ Python/ Django/ PHP/ YII
-						</li>
-						<li>
-							<span class="fa fa-check"></span> С 2005 года реализовали 52 проекта.
-						</li>
-					</ul>
-				</div>
-
-
-				<div class="row">
-					<div class="col-service">
-						<div class="col-service-in col-md-6 col-sm-12 service">
-							<i class="fa fa-rocket bigicon"></i>
-							<h4><strong>Аутсорсинг стартапов</strong></h4>
-							<div class="col-text">
-								<p>
-									<p><i class="fa fa-check"></i> Стартуем командой с опытным тимлидом</p>
-									<p><i class="fa fa-check"></i> Растём вместе с вами, подключая к проекту больше людей</p>
-									<p><i class="fa fa-check"></i> Передаём ключевые знания вашему персоналу</p>
-
-								</p>
-							</div>
-						</div>
-
-
-						<div class="col-service-in col-md-6 col-sm-12 service">
-							<i class="fa fa-wrench bigicon"></i>
-							<h4><strong>Заказная разработка</strong></h4>
-							<div class="col-text">
-								<p class="service-list-header">
-									Реализуем проект, выходящий за рамки вашей специализации:
-									<p><i class="fa fa-check"></i> Приложения для мобильных устройств, соц. сетей, Smart-TV</p>
-									<p><i class="fa fa-check"></i> Сайт, веб-сервис</p>
-									<p><i class="fa fa-check"></i> Сайты для промо-кампании</p>
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-service">
-						<div class="col-service-in col-md-6 col-sm-12 service">
-							<i class="fa fa-industry bigicon"></i>
-							<h4><strong>Построение систем</strong></h4>
-							<div class="col-text">
-								<p class="service-list-header">
-									Умеем делать системы с обработкой больших данных, аналитикой и другими сложными штуками.
-									<p>
-										<a href="#portfoliomodal4" data-toggle="modal"><strong> см. «УГМК-холдинг»</strong></a>
-									</p>
-								</p>
-							</div>
-						</div>
-
-						<div class="col-service-in col-md-6 col-sm-12 service">
-							<i class="fa fa-star bigicon"></i>
-							<h4><strong>Особые условия</strong></h4>
-							<div class="col-text">
-								<p>
-									<p><i class="fa fa-check"></i> Информационная безопасность - например для работы с деньгами</p>
-									<p><i class="fa fa-check"></i> Интеграрация с вашей инфраструктурой</p>
-									<p><i class="fa fa-check"></i> Если софт должен работать на слабых устройствах, мы его оптимизируем</p>
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<a href="#tf-contact" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставить заявку</a>
-
-				</div>
-
-
-			</div>
-		</section>
-
-		<!-- Team Page
-    ==========================================-->
-		<section id="tf-team" class="dark text-center">
-			<div class="overlay">
+			<section id="tf-services" class="text-center">
 				<div class="container">
 					<div class="section-title center">
-						<h2>Устойчивая команда</h2>
+						<h2> Делайте софт c нами</h2>
 						<div class="line">
 							<hr>
 						</div>
-					</div>
-
-					<div id="team" class="owl-carousel owl-theme row">
-						<div class="item  col-sm-3">
-							<div class="thumbnail">
-								<img src="img/team/1.jpg" alt="..." class="img-circle team-img">
-								<div class="caption">
-									<h3>Яша</h3>
-									<p>Главный</p>
-								</div>
-							</div>
-						</div>
-						<div class="item  col-sm-3">
-							<div class="thumbnail">
-								<img src="img/team/3.jpg" alt="..." class="img-circle team-img">
-								<div class="caption">
-									<h3>Слава</h3>
-									<p>Менеджер проектов</p>
-								</div>
-							</div>
-						</div>
-						<div class="item  col-sm-3">
-							<div class="thumbnail">
-								<img src="img/team/4.jpg" alt="..." class="img-circle team-img">
-								<div class="caption">
-									<h3>Ковязик</h3>
-									<p>Тим лид</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="item  col-sm-3">
-							<div class="thumbnail">
-								<img src="img/team/2.jpg" alt="..." class="img-circle team-img">
-								<div class="caption">
-									<h3>Шурик</h3>
-									<p>Тим лид</p>
-								</div>
-							</div>
-						</div>
-						<h3>+15 разработчиков</h3>
-
-
+						<div class="clearfix"></div>
+						<ul class="about-list">
+							<li>
+								<!--								<span class="fa fa-check"></span>-->
+								Веб, мобильные приложения, соцсети, ТВ, автоматизация
+							</li>
+							<li>
+								<!--								<span class="fa fa-check"></span> -->
+								Клиенты &mdash; от <a>стартапов</a> до <a>Microsoft</a> и <a>SAP</a>
+							</li>
+							<li>
+								<!--								<span class="fa fa-check"></span> -->
+								Умеем <a class=hoverExplainer>много технологий
+								<div class=hoverExplainerText><ul>
+								<li>HTML5 SPA + MVVM</li>
+									<li>Node.JS + MongoDB</li>
+								<li>Python/ Django</li>
+								<li>PHP/ YII</li>
+								<li>PhoneGap</li>
+								</ul></div>
+								</a>
+							</li>
+							<li>
+								<!--								<span class="fa fa-check"></span> -->
+								С 2005 года реализовали <a>50+ проектов</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+			<!--			<div class=container>-->
+			<section id="tf-outsourceStartup" class=" service  ">
+				<div class=container>
+					<!--				<h2 class="section-heading">Что мы умеем</h2>-->
+					<h2 class="section-heading">Аутсорсинг стартапов</h2>
+					<ul class="serviceTextBlock  col-sm-6  col-xs-11 col-sm-offset-6 col-xs-offset-1">
+						<!--						<h4>Аутсорсинг стартапов</h4>-->
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Стартуем командой с опытным тимлидом</span>
+						</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Растём вместе с вами, подключая к проекту больше людей</span>
+						</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Передаём ключевые знания вашему персоналу</span>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-		<!-- About Us Page
+			<section id="tf-outsource" class=" service orange ">
+				<div class=container>
+					<h2 class="section-heading">Заказная разработка</h2>
+					<ul class="serviceTextBlock  col-sm-6  col-xs-11 col-sm-offset-6 col-xs-offset-1">
+						<span class="inlineGrayBg">Отдайте нам то, что вам неудобно делать своими руками:</span>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Приложения для мобильных устройств, соц. сетей, Smart-TV</span>
+						</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Сайт, веб-сервис</span>
+						</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Технический инструментарий для промо-кампании</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="tf-enterprise" class=" service  ">
+				<div class=container>
+					<h2>Построение систем</h2>
+					<ul class="serviceTextBlock  col-sm-6  col-xs-11 col-sm-offset-6 col-xs-offset-1">
+
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> CRM, аналитика, интеграция с бухгалтерией, ...</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Приложения мобильного рабочего места</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Умеем делать системы с обработкой больших данных и другими сложными штуками</li>
+						<!--							<li><i class="fa fa-check"></i> см. «УГМК-холдинг»</li>-->
+					</ul>
+				</div>
+			</section>
+
+			<section id="tf-misc" class=" service  orange">
+				<div class=container>
+					<h2>Ещё умеем...</h2>
+					<ul class="serviceTextBlock  col-sm-6  col-xs-11 col-sm-offset-6 col-xs-offset-1">
+
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Информационная безопасность - например для работы с деньгами</span>
+						</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Интеграция с вашей инфраструктурой</span>
+						</li>
+						<li><span class="inlineGrayBg"><i class="fa fa-check"></i> Если софт должен работать на <a>слабых устройствах</a>, мы его оптимизируем</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class=" text-center  " style="    padding: 100px;">
+				<a href="#tf-contact" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставить заявку</a>
+			</section>
+			<!--			</div>-->
+			<!-- Team Page
+    ==========================================-->
+			<section id="tf-team" class="dark text-center">
+				<div class="overlay">
+					<div class="container">
+						<div class="section-title center">
+							<h2>Устойчивая команда</h2>
+							<div class="line">
+								<hr>
+							</div>
+						</div>
+
+						<div id="team" class="owl-carousel owl-theme row">
+							<!--
+							<div class="item  col-sm-3">
+								<div class="thumbnail">
+									<img src="img/team/1.jpg" alt="..." class="img-circle team-img">
+									<div class="caption">
+										<h3>Яша Альперин</h3>
+										<p>Главный</p>
+									</div>
+								</div>
+							</div>
+							<div class="item  col-sm-3">
+								<div class="thumbnail">
+									<img src="img/team/3.jpg" alt="..." class="img-circle team-img">
+									<div class="caption">
+										<h3>Слава Анисимов</h3>
+										<p>Менеджер проектов</p>
+									</div>
+								</div>
+							</div>
+							<div class="item  col-sm-3">
+								<div class="thumbnail">
+									<img src="img/team/4.jpg" alt="..." class="img-circle team-img">
+									<div class="caption">
+										<h3>Дима Ковязин</h3>
+										<p>Тимлид</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="item  col-sm-3">
+								<div class="thumbnail">
+									<img src="img/team/2.jpg" alt="..." class="img-circle team-img">
+									<div class="caption">
+										<h3>Шурик Кузнецов</h3>
+										<p>Тимлид</p>
+									</div>
+								</div>
+							</div>
+-->
+							<h3>ядро команды работает с 2005-го года</h3>
+							<h3>5 тимлидов</h3>
+							<h3>15+ разработчиков</h3>
+							<h3>офис в центре Екатеринбурга</h3>
+							<!--
+							<div>Расклад по компетенциям:
+								<ul>
+									<li>HTML5/Node.JS/MongoDB/KnockoutJS = 12 (5 senior)</li>
+									<li>
+										PhoneGap = 4 (3 senior)</li>
+									<li>
+										Python/Django = 3 (1 senior)</li>
+									<li>
+										PHP/YII = 3 (2 senior)</li>
+									<li>
+										тв-приставки = 3 (2 senior)</li>
+								</ul>
+								Если очень-очень нужно, можем делать что-то небольшое на Java, .Net, C++, Unity3D/OpenGL
+							</div>
+-->
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About Us Page
    ==========================================-->
-		<!--
+			<!--
 	<div id="tf-about">
 		<div class="container">
 			<div class="row">
@@ -423,797 +560,805 @@
 -->
 
 
-		<!-- our process -->
-		<section id="tf-process">
-			<div class="container">
-				<!-- Container -->
-				<div class="section-title text-center center">
-					<div class="row">
-						<div class="col-lg-12 text-center">
-							<h2 class="section-heading">Варианты процесса работы</h2>
+			<!-- our process -->
+			<section id="tf-process">
+				<div class="container">
+					<!-- Container -->
+					<div class="section-title text-center center">
+						<div class="row">
+							<div class="col-lg-12 text-center">
+								<h2 class="section-heading">Варианты процесса работы</h2>
+								<div class="line">
+									<hr>
+								</div>
+								<!--<h3 class="section-subheading text-muted">Как мы строим процесс</h3>-->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<i class="fa fa-ship iconpic"></i>
+								<h3>Waterfall</h3>
+								<p class="text-muted">Классика. Сначала вместе понимаем размер проекта и денег, затем пишем ТЗ и заключаем договор.
+									<br>
+									<br>Подходит для типовых проектов с фиксированым сроком и бюджетом.</p>
+							</div>
+							<div class="col-sm-6">
+								<i class="fa fa-send iconpic"></i>
+								<h3>Agile</h3>
+								<p class="text-muted">Тогда мы заключаем договор без ТЗ, на повременной основе. Регулярно встречаемся/созваниваемся/списываемся, обсуждаем текущий статус проекта и корректируем задачи.
+									<br>
+									<br>Подходит для задач, у которых рамки расплывчаты, а ТЗ может и будет меняться каждую неделю. :)</p>
+							</div>
+							<div class="col-lg-12" style="display:none">
+								<!--<ul class="timeline">-->
+								<!--<li>-->
+								<!--<div class="timeline-image">-->
+								<!--<i class="step-number">1</i>-->
+								<!--</div>-->
+								<!--<div class="timeline-panel">-->
+								<!--<div class="timeline-heading">-->
+								<!--<h4 class="subheading">ПРОЕКТИРОВАНИЕ</h4>-->
+								<!--</div>-->
+								<!--<div class="timeline-body">-->
+								<!--<p class="text-muted">Связываемся и вместе понимаем суть будущего продукта. Мы даём оценку и определяем порядки денег. Бесплатно. </p>-->
+								<!--</div>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li class="timeline-inverted">-->
+								<!--<div class="timeline-image">-->
+								<!--<i class="step-number">2</i>-->
+								<!--</div>-->
+								<!--<div class="timeline-panel">-->
+								<!--<div class="timeline-heading">-->
+								<!--<h4 class="subheading">ТЗ и договор</h4>-->
+								<!--</div>-->
+								<!--<div class="timeline-body">-->
+								<!--<p class="text-muted"> Когда размеры продукта и бюджета совпадают — уточняем детали, определяем точную стоимость, пишем ТЗ, заключаем договор.</p>-->
+								<!--</div>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--<div class="timeline-image">-->
+								<!--<i class="step-number">3</i>-->
+								<!--</div>-->
+								<!--<div class="timeline-panel">-->
+								<!--<div class="timeline-heading">-->
+								<!--<h4 class="subheading">РАЗРАБОТКА</h4>-->
+								<!--</div>-->
+								<!--<div class="timeline-body">-->
+								<!--<p class="text-muted">Поэтапно смотрим, что получается, и корректируем направление движения.</p>-->
+								<!--</div>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--<div class="timeline-image">-->
+								<!--<i class="step-number">3</i>-->
+								<!--</div>-->
+								<!--<div class="timeline-panel">-->
+								<!--<div class="timeline-heading">-->
+								<!--<h4 class="subheading">СПРИНТЫ</h4>-->
+								<!--</div>-->
+								<!--<div class="timeline-body">-->
+								<!--<p class="text-muted">Регулярно встречаемся/созваниваемся/списываемся и обсуждаем текущее состояние проекта.</p>-->
+								<!--</div>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li class="timeline-inverted" style="min-height:0px;">-->
+								<!--<div class="timeline-image">-->
+								<!--<i class="step-number">4</i>-->
+								<!--</div>-->
+								<!--<div class="timeline-panel">-->
+								<!--<div class="timeline-heading">-->
+								<!--<h4 class="subheading">ГОД ГАРАНТИИ</h4>-->
+								<!--</div>-->
+								<!--<div class="timeline-body">-->
+								<!--<p class="text-muted"> После сдачи продукта остаёмся на связи. </p>-->
+								<!--</div>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--</ul>-->
+
+								<ul class="timeline">
+									<li>
+										<div class="timeline-image">
+											<i class="step-number">1</i>
+										</div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="subheading">Фиксированный</h4>
+											</div>
+											<div class="timeline-body">
+												<p class="text-muted">Классика. Сначала вместе понимаем размер проекта и денег, затем пишем ТЗ и заключаем договор. Дальше всё по договору.
+													<br>Подходит для типовых проектов с фиксированым сроком и бюджетом.</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="timeline-inverted" style="margin-top:20px;">
+										<div class="timeline-image">
+											<i class="step-number">2</i>
+										</div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="subheading">Гибкий</h4>
+											</div>
+											<div class="timeline-body">
+												<p class="text-muted">Иногда, рамки проекта расплывчаты, а ТЗ может и будет меняться каждую неделю. Тогда мы заключаем договор без ТЗ, на повременной основе. Затем регулярно встречаемся/созваниваемся/списываемся чтобы обсуждить текущее состояние проекта. </p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<!-- Clients Section
+    ==========================================-->
+			<section id="tf-clients" class="text-center">
+				<div class="overlay">
+					<div class="container">
+						<div class="section-title center">
+							<h2> Наши клиенты</h2>
 							<div class="line">
 								<hr>
 							</div>
-							<!--<h3 class="section-subheading text-muted">Как мы строим процесс</h3>-->
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<h3>Waterfall</h3>
-							<p class="text-muted">Подходит для типовых проектов с фиксированым сроком и бюджетом. Сначала вместе понимаем размер проекта и денег, затем пишем ТЗ и заключаем договор. Дальше всё по договору. </p>
-						</div>
-						<div class="col-md-6">
-							<h3>Agile</h3>
-							<p class="text-muted">Иногда, рамки проекта расплывчаты, а ТЗ может и будет меняться каждую неделю. Тогда мы заключаем договор без ТЗ, на повременной основе. Затем регулярно встречаемся/созваниваемся/списываемся чтобы обсуждить текущее состояние проекта. </p>
-						</div>
-						<div class="col-lg-12" style="display:none">
-							<!--<ul class="timeline">-->
-							<!--<li>-->
-							<!--<div class="timeline-image">-->
-							<!--<i class="step-number">1</i>-->
-							<!--</div>-->
-							<!--<div class="timeline-panel">-->
-							<!--<div class="timeline-heading">-->
-							<!--<h4 class="subheading">ПРОЕКТИРОВАНИЕ</h4>-->
-							<!--</div>-->
-							<!--<div class="timeline-body">-->
-							<!--<p class="text-muted">Связываемся и вместе понимаем суть будущего продукта. Мы даём оценку и определяем порядки денег. Бесплатно. </p>-->
-							<!--</div>-->
-							<!--</div>-->
-							<!--</li>-->
-							<!--<li class="timeline-inverted">-->
-							<!--<div class="timeline-image">-->
-							<!--<i class="step-number">2</i>-->
-							<!--</div>-->
-							<!--<div class="timeline-panel">-->
-							<!--<div class="timeline-heading">-->
-							<!--<h4 class="subheading">ТЗ и договор</h4>-->
-							<!--</div>-->
-							<!--<div class="timeline-body">-->
-							<!--<p class="text-muted"> Когда размеры продукта и бюджета совпадают — уточняем детали, определяем точную стоимость, пишем ТЗ, заключаем договор.</p>-->
-							<!--</div>-->
-							<!--</div>-->
-							<!--</li>-->
-							<!--<li>-->
-							<!--<div class="timeline-image">-->
-							<!--<i class="step-number">3</i>-->
-							<!--</div>-->
-							<!--<div class="timeline-panel">-->
-							<!--<div class="timeline-heading">-->
-							<!--<h4 class="subheading">РАЗРАБОТКА</h4>-->
-							<!--</div>-->
-							<!--<div class="timeline-body">-->
-							<!--<p class="text-muted">Поэтапно смотрим, что получается, и корректируем направление движения.</p>-->
-							<!--</div>-->
-							<!--</div>-->
-							<!--</li>-->
-							<!--<li>-->
-							<!--<div class="timeline-image">-->
-							<!--<i class="step-number">3</i>-->
-							<!--</div>-->
-							<!--<div class="timeline-panel">-->
-							<!--<div class="timeline-heading">-->
-							<!--<h4 class="subheading">СПРИНТЫ</h4>-->
-							<!--</div>-->
-							<!--<div class="timeline-body">-->
-							<!--<p class="text-muted">Регулярно встречаемся/созваниваемся/списываемся и обсуждаем текущее состояние проекта.</p>-->
-							<!--</div>-->
-							<!--</div>-->
-							<!--</li>-->
-							<!--<li class="timeline-inverted" style="min-height:0px;">-->
-							<!--<div class="timeline-image">-->
-							<!--<i class="step-number">4</i>-->
-							<!--</div>-->
-							<!--<div class="timeline-panel">-->
-							<!--<div class="timeline-heading">-->
-							<!--<h4 class="subheading">ГОД ГАРАНТИИ</h4>-->
-							<!--</div>-->
-							<!--<div class="timeline-body">-->
-							<!--<p class="text-muted"> После сдачи продукта остаёмся на связи. </p>-->
-							<!--</div>-->
-							<!--</div>-->
-							<!--</li>-->
-							<!--</ul>-->
-
-							<ul class="timeline">
-								<li>
-									<div class="timeline-image">
-										<i class="step-number">1</i>
-									</div>
-									<div class="timeline-panel">
-										<div class="timeline-heading">
-											<h4 class="subheading">Фиксированный</h4>
-										</div>
-										<div class="timeline-body">
-											<p class="text-muted">Подходит для типовых проектов с фиксированым сроком и бюджетом. Сначала вместе понимаем размер проекта и денег, затем пишем ТЗ и заключаем договор. Дальше всё по договору. </p>
-										</div>
-									</div>
-								</li>
-
-								<li class="timeline-inverted" style="margin-top:20px;">
-									<div class="timeline-image">
-										<i class="step-number">2</i>
-									</div>
-									<div class="timeline-panel">
-										<div class="timeline-heading">
-											<h4 class="subheading">Гибкий</h4>
-										</div>
-										<div class="timeline-body">
-											<p class="text-muted">Иногда, рамки проекта расплывчаты, а ТЗ может и будет меняться каждую неделю. Тогда мы заключаем договор без ТЗ, на повременной основе. Затем регулярно встречаемся/созваниваемся/списываемся чтобы обсуждить текущее состояние проекта. </p>
-										</div>
-									</div>
-								</li>
-							</ul>
+						<div id="logo-list" class="owl-carousel0 owl-theme0" style="height:100%;align:center;">
+							<div class="item">
+								<img src="img/client/05.png">
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/02.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/11.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/08.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/01.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/06.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/07.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/04.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/09.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/10.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/03.png">
+								</a>
+							</div>
+							<div class="item">
+								<a href=""><img src="img/client/12.png">
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-
-
-		<!-- Clients Section
+			<!-- Portfolio Section
     ==========================================-->
-		<section id="tf-clients" class="text-center">
-			<div class="overlay">
+			<section id="tf-works">
 				<div class="container">
-					<div class="section-title center">
-						<h2> Наши клиенты</h2>
+					<!-- Container -->
+					<div class="section-title text-center center">
+						<h2> Примеры работ</h2>
 						<div class="line">
 							<hr>
 						</div>
 					</div>
-					<div id="logo-list" class="owl-carousel0 owl-theme0" style="height:100%;align:center;">
-						<div class="item">
-							<img src="img/client/05.png">
+
+					<div class="categories">
+
+						<ul class="cat">
+							<li class="pull-left">
+								<h4>Фильтр по типам</h4>
+							</li>
+							<li class="pull-right">
+								<ol class="type">
+									<li><a href="#" data-filter="*" class="active">Все</a>
+									</li>
+									<li><a href="#" data-filter=".startup">Стартапы</a>
+									</li>
+									<li><a href="#" data-filter=".app">Приложения</a>
+									</li>
+									<li><a href="#" data-filter=".web">Веб-порталы</a>
+									</li>
+									<li><a href="#" data-filter=".system">Системы</a>
+									</li>
+								</ol>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+
+					<div id="lightbox" class="row">
+						<div class="col-sm-6 col-md-3 col-lg-3 startup web">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/ridero.png);">
+									<div class="portfolio-item-marker">SERVICE</div>
+									<div class="portfolio-item-marker" style="margin-top:40px;">STARTUP</div>
+									<a href="#portfoliomodal1" data-toggle="modal">
+										<div class="hover-text">
+											<h4>Ridero</h4>
+											<small>Стартап</small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/ridero.png" class="img-responsive" alt="">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/02.png">
-							</a>
+
+						<div class="col-sm-6 col-md-3 col-lg-3 app">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/domru.png);">
+									<div class="portfolio-item-marker">MOBILE</div>
+									<div class="portfolio-item-marker" style="margin-top:40px;">SERVICE</div>
+									<a href="#portfoliomodal2" data-toggle="modal">
+										<div class="hover-text">
+											<h4>Дом.ru Агент</h4>
+											<small>Мобильное приложение</small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/domru.png" class="img-responsive" alt="">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/11.png">
-							</a>
+
+						<div class="col-sm-6 col-md-3 col-lg-3 app">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/domrutv1.jpg);">
+									<div class="portfolio-item-marker">TV</div>
+									<a href="#portfoliomodal3" data-toggle="modal">
+										<div class="hover-text">
+											<h4>Дом.ru TV</h4>
+											<small>Набор телевизионных приложений для абонентов провайдера Дом.ru</small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/domrutv1.jpg" class="img-responsive" alt="...">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/08.png">
-							</a>
+
+						<div class="col-sm-6 col-md-3 col-lg-3 system web">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/ugmk.png);">
+									<div class="portfolio-item-marker">BI</div>
+									<div class="portfolio-item-marker" style="margin-top:40px;">BIG DATA</div>
+									<a href="#portfoliomodal4" data-toggle="modal">
+										<div class="hover-text">
+											<h4>УГМК холдинг</h4>
+											<small>ERP-система</small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/ugmk.png" class="img-responsive" alt="...">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/01.png">
-							</a>
+
+						<div class="col-sm-6 col-md-3 col-lg-3 web">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/sapcis.jpg);">
+									<div class="portfolio-item-marker">MOBILE</div>
+									<a href="#portfoliomodal5" data-toggle="modal">
+										<div class="hover-text">
+											<h4>SAP CIS Events</h4>
+											<small>Мобильное приложение для устройств iOS и Android</small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/sapcis.jpg" class="img-responsive" alt="...">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/06.png">
-							</a>
+
+						<div class="col-sm-6 col-md-3 col-lg-3 web">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/codehour.png);">
+									<div class="portfolio-item-marker">HIGHLOAD</div>
+									<div class="portfolio-item-marker" style="MARGIN-top:40PX;">GAME</div>
+									<a href="#portfoliomodal6" data-toggle="modal">
+										<div class="hover-text">
+											<h4>Час кода в России</h4>
+											<small>Высоконагруженный портал для акции «Час кода», проходившей с 4 по 12 декабря 2014 года
+                                    </small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/codehour.png" class="img-responsive" alt="...">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/07.png">
-							</a>
+
+						<div class="col-sm-6 col-md-3 col-lg-3 app web system">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/advex.png);">
+									<div class="portfolio-item-marker">SERVICE</div>
+									<div class="portfolio-item-marker" style="margin-top:40px;">MOBILE</div>
+									<a href="#portfoliomodal7" data-toggle="modal">
+										<div class="hover-text">
+											<h4>Адвекс</h4>
+											<small>Автоматизация деятельности агентства недвижимости «Адвекс», Тюмень
+                                    </small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/advex.png" class="img-responsive" alt="...">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/04.png">
-							</a>
+
+						<div class="col-sm-6 col-md-3 col-lg-3 app startup">
+							<div class="portfolio-item">
+
+								<div class="hover-bg" style="background-image: url(img/portfolio/delivme.png);">
+									<div class="portfolio-item-marker">STARTUP</div>
+									<a href="#portfoliomodal8" data-toggle="modal">
+										<div class="hover-text">
+											<h4>Deliv.me</h4>
+											<small>Служба курьерской доставки
+                                    </small>
+											<div class="clearfix"></div>
+											<i class="fa fa-angle-double-right"></i>
+										</div>
+										<!--										<img src="img/portfolio/delivme.png" class="img-responsive" alt="...">-->
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<a href=""><img src="img/client/09.png">
-							</a>
-						</div>
-						<div class="item">
-							<a href=""><img src="img/client/10.png">
-							</a>
-						</div>
-						<div class="item">
-							<a href=""><img src="img/client/03.png">
-							</a>
-						</div>
-						<div class="item">
-							<a href=""><img src="img/client/12.png">
-							</a>
-						</div>
+
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Portfolio Section
+			<!-- Testimonials Section
     ==========================================-->
-		<section id="tf-works">
-			<div class="container">
-				<!-- Container -->
-				<div class="section-title text-center center">
-					<h2> Примеры работ</h2>
-					<div class="line">
-						<hr>
+			<section id="tf-testimonials" class="dark text-center">
+				<div class="overlay">
+					<div class="container">
+						<div class="section-title center">
+							<h2> Отзывы</h2>
+							<div class="line">
+								<hr>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div id="testimonial" class="owl-carousel owl-theme feedback">
+									<div class="item">
+										<p class="fbtext">Хочется отметить внимательное отношение ко всем пожеланиям при создании новой системы управления базой недвижимости, сайта компании и мобильного приложения. Отзывчивость и клиентоориентированность оставили приятное впечатление.</p>
+
+										<p><strong>Сухарев Артур</strong>, замгендир по развитию агентства Адвекс, Тюмень.</p>
+									</div>
+
+									<div class="item">
+										<p class="fbtext">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+										<p>Dean Martin, CEO Acme Inc.</p>
+									</div>
+
+									<div class="item">
+										<p class="fbtext">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+										<p>Dean Martin, CEO Acme Inc.</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+			</section>
 
-				<div class="categories">
-
-					<ul class="cat">
-						<li class="pull-left">
-							<h4>Фильтр по типам</h4>
-						</li>
-						<li class="pull-right">
-							<ol class="type">
-								<li><a href="#" data-filter="*" class="active">Все</a>
-								</li>
-								<li><a href="#" data-filter=".startup">Стартапы</a>
-								</li>
-								<li><a href="#" data-filter=".app">Приложения</a>
-								</li>
-								<li><a href="#" data-filter=".web">Веб-порталы</a>
-								</li>
-								<li><a href="#" data-filter=".system">Системы</a>
-								</li>
-							</ol>
-						</li>
-					</ul>
-					<div class="clearfix"></div>
-				</div>
-
-				<div id="lightbox" class="row">
-					<div class="col-sm-6 col-md-3 col-lg-3 startup web">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">SERVICE</div>
-								<div class="portfolio-item-marker" style="margin-top:40px;">STARTUP</div>
-								<a href="#portfoliomodal1" data-toggle="modal">
-									<div class="hover-text">
-										<h4>Ridero</h4>
-										<small>Стартап</small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/ridero.png" class="img-responsive" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 col-lg-3 app">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">MOBILE</div>
-								<div class="portfolio-item-marker" style="margin-top:40px;">SERVICE</div>
-								<a href="#portfoliomodal2" data-toggle="modal">
-									<div class="hover-text">
-										<h4>Дом.ru Агент</h4>
-										<small>Мобильное приложение</small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/domru.png" class="img-responsive" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 col-lg-3 app">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">TV</div>
-								<a href="#portfoliomodal3" data-toggle="modal">
-									<div class="hover-text">
-										<h4>Дом.ru TV</h4>
-										<small>Набор телевизионных приложений для абонентов провайдера Дом.ru</small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/domrutv1.jpg" class="img-responsive" alt="...">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 col-lg-3 system web">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">BI</div>
-								<div class="portfolio-item-marker" style="margin-top:40px;">BIG DATA</div>
-								<a href="#portfoliomodal4" data-toggle="modal">
-									<div class="hover-text">
-										<h4>УГМК холдинг</h4>
-										<small>ERP-система</small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/ugmk.png" class="img-responsive" alt="...">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 col-lg-3 web">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">MOBILE</div>
-								<a href="#portfoliomodal5" data-toggle="modal">
-									<div class="hover-text">
-										<h4>SAP CIS Events</h4>
-										<small>Мобильное приложение для устройств iOS и Android</small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/sapcis.jpg" class="img-responsive" alt="...">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 col-lg-3 web">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">HIGHLOAD</div>
-								<div class="portfolio-item-marker" style="MARGIN-top:40PX;">GAME</div>
-								<a href="#portfoliomodal6" data-toggle="modal">
-									<div class="hover-text">
-										<h4>Час кода в России</h4>
-										<small>Высоконагруженный портал для акции «Час кода», проходившей с 4 по 12 декабря 2014 года
-                                    </small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/codehour.png" class="img-responsive" alt="...">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 col-lg-3 app web system">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">SERVICE</div>
-								<div class="portfolio-item-marker" style="margin-top:40px;">MOBILE</div>
-								<a href="#portfoliomodal7" data-toggle="modal">
-									<div class="hover-text">
-										<h4>Адвекс</h4>
-										<small>Автоматизация деятельности агентства недвижимости «Адвекс», Тюмень
-                                    </small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/advex.png" class="img-responsive" alt="...">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 col-lg-3 app startup">
-						<div class="portfolio-item">
-
-							<div class="hover-bg">
-								<div class="portfolio-item-marker">STARTUP</div>
-								<a href="#portfoliomodal8" data-toggle="modal">
-									<div class="hover-text">
-										<h4>Deliv.me</h4>
-										<small>Служба курьерской доставки
-                                    </small>
-										<div class="clearfix"></div>
-										<i class="fa fa-angle-double-right"></i>
-									</div>
-									<img src="img/portfolio/delivme.png" class="img-responsive" alt="...">
-								</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-		<!-- Testimonials Section
+			<!-- Contact Section
     ==========================================-->
-		<section id="tf-testimonials" class="dark text-center">
-			<div class="overlay">
+			<section id="tf-contact" class="text-center">
 				<div class="container">
-					<div class="section-title center">
-						<h2> Отзывы</h2>
-						<div class="line">
-							<hr>
-						</div>
-					</div>
+
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<div id="testimonial" class="owl-carousel owl-theme feedback">
-								<div class="item">
-									<p class="fbtext">Хочется отметить внимательное отношение ко всем пожеланиям при создании новой системы управления базой недвижимости, сайта компании и мобильного приложения. Отзывчивость и клиентоориентированность оставили приятное впечатление.</p>
 
-									<p><strong>Сухарев Артур</strong>, замгендир по развитию агентства Адвекс, Тюмень.</p>
+							<div class="section-title center">
+								<h2>Контакты</h2>
+								<div class="line">
+									<hr>
 								</div>
-
-								<div class="item">
-									<p class="fbtext">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-									<p>Dean Martin, CEO Acme Inc.</p>
-								</div>
-
-								<div class="item">
-									<p class="fbtext">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-									<p>Dean Martin, CEO Acme Inc.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Contact Section
-    ==========================================-->
-		<section id="tf-contact" class="text-center">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-
-						<div class="section-title center">
-							<h2>Пишите / звоните</h2>
-							<div class="line">
-								<hr>
-							</div>
-							<div class="clearfix"></div>
-							<div class="row" style="margin-top:20px;">
-								<div class="contacts-card col-md-6">
-
-									<img class="col-md-6" src="img/yakov.png">
-									<div class="col-md-6 contacts-card-text">
-										<ul class="about-list">
-											<li class="al-header" style="margin-bottom:0px;">ДИРЕКТОР</li>
-											<li style="font-size:14px; margin-bottom:0px;"><em>Яков Альперин</em>
-											</li>
-											<li style="font-size:14px; margin-bottom:0px;"><em><a href="mailto:v@jetstyle.ru">v@jetstyle.ru</a></em>
-											</li>
-											<li style="font-size:14px; margin-bottom:0px;"><em><a href="tel:+7(922)208-26-26">+7(922)208-26-26</a></em>
-											</li>
-											<li style="font-size:14px; margin-bottom:0px;"><em>skype: <a href="skype:yak-off?chat">yak-off</a></em>
-											</li>
-										</ul>
+								<div class="clearfix"></div>
+								<div class="row" style="margin-top:20px;">
+									<div class="contacts-card col-sm-6 col-xs-12">
+										<div class=row>
+											<img class="col-xs-6" src="img/team/1.jpg">
+											<div class="col-xs-6 contacts-card-text">
+												<ul class="about-list">
+													<li class="al-header">ДИРЕКТОР</li>
+													<li><em>Яков Альперин</em>
+													</li>
+													<li><a href="mailto:v@jetstyle.ru">v@jetstyle.ru</a>
+													</li>
+													<li><a href="tel:+7(922)208-26-26">+7(922)208-26-26</a>
+													</li>
+													<li>skype: <a href="skype:yak-off?chat">yak-off</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</div>
+									<div class="contacts-card col-sm-6 col-xs-12">
+										<div class=row>
+											<img class="col-xs-6" src="img/team/3.jpg">
+											<div class="col-xs-6 contacts-card-text">
 
-								</div>
-								<div class="contacts-card col-md-6">
-
-									<img class="col-md-6" src="img/slava.png">
-									<div class="col-md-6 contacts-card-text">
-
-										<ul class="about-list">
-											<li class="al-header" style="margin-bottom:0px;">ПРОЕКТНЫЙ МЕНЕДЖЕР</li>
+												<ul class="about-list">
+													<li class="al-header" style="margin-bottom:0px;">ПРОЕКТНЫЙ МЕНЕДЖЕР</li>
 
 
-											<li style="font-size:14px; margin-bottom:0px;"><em>Вячеслав Анисимов</em>
-											</li>
-											<li style="font-size:14px; margin-bottom:0px;"><em><a href="mailto:v@jetstyle.ru">v@jetstyle.ru</a></em>
-											</li>
-											<li style="font-size:14px; margin-bottom:0px;"><em><a href="tel:+7(922)222-78-07">+7(922)222-78-07</a></em>
-											</li>
-											<li style="font-size:14px; margin-bottom:0px;"><em>skype: <a href="skype:ekburgets?chat">ekburgets</a></em>
-											</li>
-										</ul>
+													<li style="font-size:14px; margin-bottom:0px;"><em>Вячеслав Анисимов</em>
+													</li>
+													<li style="font-size:14px; margin-bottom:0px;"><em><a href="mailto:v@jetstyle.ru">v@jetstyle.ru</a></em>
+													</li>
+													<li style="font-size:14px; margin-bottom:0px;"><em><a href="tel:+7(922)222-78-07">+7(922)222-78-07</a></em>
+													</li>
+													<li style="font-size:14px; margin-bottom:0px;"><em>skype: <a href="skype:ekburgets?chat">ekburgets</a></em>
+													</li>
+												</ul>
+											</div>
+										</div>
+
 									</div>
-
 								</div>
+								<div class="clearfix"></div>
 							</div>
-							<div class="clearfix"></div>
+							<form>
+								<div style=""></div>
+
+							</form>
 						</div>
-						<form>
-							<div style=""></div>
-
-						</form>
 					</div>
-				</div>
 
-			</div>
-			<a href="#tf-contact" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставить заявку</a>
-		</section>
-	</div>
-	<nav id="footer">
-		<div class="container">
-			<div class="pull-right fnav">
-				<ul class="footer-social">
-					<li><a href="#"><i class="fa fa-facebook"></i></a>
-					</li>
-					<li><a href="#"><i class="fa fa-dribbble"></i></a>
-					</li>
-					<li><a href="#"><i class="fa fa-google-plus"></i></a>
-					</li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a>
-					</li>
-				</ul>
-			</div>
+				</div>
+				<a href="#tf-contact" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставить заявку</a>
+			</section>
 		</div>
-	</nav>
-
-	<div class="portfolio-modal modal fade" id="portfoliomodal1" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
-					</div>
+		<nav id="footer">
+			<div class="container">
+				<div class="pull-right fnav">
+					<ul class="footer-social">
+						<li><a href="#"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a>
+						</li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a>
+						</li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>Ridero</h2>
-							<p class="item-intro text-muted">Интеллектуальная платформа для независимых авторов.</p>
-							<img class="img-portfolio" src="img/portfolio/ridero.png" alt="">
-							<p>Ridero — электронная издательская платформа для независимых авторов. Разработанная в России, платформа Ridero позволяет авторам любых жанров за несколько минут бесплатно превратить книгу из рукописи (например, файла Word) в полноценно сверстанную электронную и/или бумажную книгу с последующим размещением ее в ведущих онлайн-магазинах (Озон, Litres и других). Ridero.ru функционирует с июля 2014 года и в данный момент объединяет более 9000 независимых авторов – от лидеров книжного рынка до начинающих писателей. Цель Ridero – позволить авторам не зависеть от издательских вкусов, рыночного цикла и закрытой системы книжного распространения.
-							</p>
-							<p>
-								<a href="https://ridero.ru/">Веб-сайт проекта</a>
-								<ul class="list-inline">
-									<li>Дата: Июль 2014</li>
-									<li>Клиент: Ридеро</li>
-									<li>Категория: Стартап</li>
-								</ul>
-								<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+		</nav>
+
+		<div class="portfolio-modal modal fade" id="portfoliomodal1" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="portfolio-modal modal fade" id="portfoliomodal2" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>Дом.ru Агент</h2>
-							<p class="item-intro text-muted">Мобильное приложение клиентам провайдера Дом.ru для iOS и Android .
-							</p>
-							<img class="img-portfolio" src="img/portfolio/domru.png" alt="">
-							<p>Дом.ru Агент – удобное бесплатное приложение, позволяющее Вам максимально комфортно и безотлагательно управлять услугами связи Дом.ru. Все необходимые сервисы, услуги и возможности в Вашем смартфоне: мгновенное пополнение счета, подключение дополнительных сервисов, переход на другой тарифный план и многое другое доступно Вам с приложением Дом.ru Агент. </p>
-							<p>
-								<a href="https://play.google.com/store/apps/details?id=com.ertelecom.agent">Приложение в Google Play</a>
-								<a href="https://itunes.apple.com/ru/app/dom.ru-agent/id799358248?mt=8" style="margin-left:20px;">Приложение в App Store</a>
-								<ul class="list-inline">
-									<li>Дата: Июль 2014</li>
-									<li>Клиент: Дом.ru</li>
-									<li>Категория: Мобильное приложение</li>
-								</ul>
-								<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>Ridero</h2>
+								<p class="item-intro text-muted">Интеллектуальная платформа для независимых авторов.</p>
+								<img class="img-portfolio" src="img/portfolio/ridero.png" alt="">
+								<p>Ridero — электронная издательская платформа для независимых авторов. Разработанная в России, платформа Ridero позволяет авторам любых жанров за несколько минут бесплатно превратить книгу из рукописи (например, файла Word) в полноценно сверстанную электронную и/или бумажную книгу с последующим размещением ее в ведущих онлайн-магазинах (Озон, Litres и других). Ridero.ru функционирует с июля 2014 года и в данный момент объединяет более 9000 независимых авторов – от лидеров книжного рынка до начинающих писателей. Цель Ridero – позволить авторам не зависеть от издательских вкусов, рыночного цикла и закрытой системы книжного распространения.
+								</p>
+								<p>
+									<a href="https://ridero.ru/">Веб-сайт проекта</a>
+									<ul class="list-inline">
+										<li>Дата: Июль 2014</li>
+										<li>Клиент: Ридеро</li>
+										<li>Категория: Стартап</li>
+									</ul>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="portfolio-modal modal fade" id="portfoliomodal3" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
+		<div class="portfolio-modal modal fade" id="portfoliomodal2" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>Дом.ru TV</h2>
-							<p class="item-intro text-muted">Набор телевизионных приложений для абонентов провайдера Дом.ru .
-							</p>
-							<img class="img-portfolio" src="img/portfolio/domrutv1.jpg" alt="">
-							<p>Работают на ТВ-приставках HUMAX двух поколений Приложения, которые разработала наша команда:
-								<br><strong>Инстаграм</strong> – вход в аккаунт, просмотр и комментирование фотографий;
-								<br><strong>Вконтакте</strong> – вход в аккаунт, просмотр и комментирование ленты событий;
-								<br><strong>Музыка Вконтакте</strong> – прослушивание музыкальных плейлистов аккаунта;
-								<br><strong>Караоке</strong> – выбор музыкальных треков с текстами из большого каталога, содержащего как бесплатные, так и платные элементы.
-
-							</p>
-							<p>
-								<a href="http://www.jetstyle.ru/portfolio/multimedia/mobilnye/tv_portal_dom_ru" style="margin-left:20px;">Подробнее о  разработке проекта</a>
-								<ul class="list-inline">
-									<li>Дата: Июль 2014</li>
-									<li>Клиент: Дом.ru</li>
-									<li>Категория: TV приложения</li>
-								</ul>
-								<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>Дом.ru Агент</h2>
+								<p class="item-intro text-muted">Мобильное приложение клиентам провайдера Дом.ru для iOS и Android .
+								</p>
+								<img class="img-portfolio" src="img/portfolio/domru.png" alt="">
+								<p>Дом.ru Агент – удобное бесплатное приложение, позволяющее Вам максимально комфортно и безотлагательно управлять услугами связи Дом.ru. Все необходимые сервисы, услуги и возможности в Вашем смартфоне: мгновенное пополнение счета, подключение дополнительных сервисов, переход на другой тарифный план и многое другое доступно Вам с приложением Дом.ru Агент. </p>
+								<p>
+									<a href="https://play.google.com/store/apps/details?id=com.ertelecom.agent">Приложение в Google Play</a>
+									<a href="https://itunes.apple.com/ru/app/dom.ru-agent/id799358248?mt=8" style="margin-left:20px;">Приложение в App Store</a>
+									<ul class="list-inline">
+										<li>Дата: Июль 2014</li>
+										<li>Клиент: Дом.ru</li>
+										<li>Категория: Мобильное приложение</li>
+									</ul>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="portfolio-modal modal fade" id="portfoliomodal4" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
+		<div class="portfolio-modal modal fade" id="portfoliomodal3" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>УГМК холдинг, ERP-система</h2>
-							<p class="item-intro text-muted">OLAP-инструмент для финансового планирования, моделирования, бюджетирования, аналитики и отчетности.
-							</p>
-							<img class="img-portfolio" src="img/portfolio/ugmk.png" alt="">
-							<p>Используется на предприятиях холдинга (почти 50 предприятий в 11 регионах России и за рубежом). Система удаленно собирает качественные и количественные показатели в различных срезах деятельности. Визуализация гибко настраивается. Используется конструктор домено-ориентированного языка Jison.
-							</p>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>Дом.ru TV</h2>
+								<p class="item-intro text-muted">Набор телевизионных приложений для абонентов провайдера Дом.ru .
+								</p>
+								<img class="img-portfolio" src="img/portfolio/domrutv1.jpg" alt="">
+								<p>Работают на ТВ-приставках HUMAX двух поколений Приложения, которые разработала наша команда:
+									<br><strong>Инстаграм</strong> – вход в аккаунт, просмотр и комментирование фотографий;
+									<br><strong>Вконтакте</strong> – вход в аккаунт, просмотр и комментирование ленты событий;
+									<br><strong>Музыка Вконтакте</strong> – прослушивание музыкальных плейлистов аккаунта;
+									<br><strong>Караоке</strong> – выбор музыкальных треков с текстами из большого каталога, содержащего как бесплатные, так и платные элементы.
 
-							<ul class="list-inline">
-								<li>Дата: Июль 2014</li>
-								<li>Клиент: УГМК</li>
-								<li>Категория: ERP-система</li>
-							</ul>
-							<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+								</p>
+								<p>
+									<a href="http://www.jetstyle.ru/portfolio/multimedia/mobilnye/tv_portal_dom_ru" style="margin-left:20px;">Подробнее о  разработке проекта</a>
+									<ul class="list-inline">
+										<li>Дата: Июль 2014</li>
+										<li>Клиент: Дом.ru</li>
+										<li>Категория: TV приложения</li>
+									</ul>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="portfolio-modal modal fade" id="portfoliomodal5" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
+		<div class="portfolio-modal modal fade" id="portfoliomodal4" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>SAP CIS Events</h2>
-							<p class="item-intro text-muted">Мобильное приложение для устройств iOS и Android. .
-							</p>
-							<img class="img-portfolio" src="img/portfolio/sapcis.jpg" alt="">
-							<p>Приложение информирует о предстоящих мероприятиях SAP и помогает на текущих. Удобная замена бумажным расписаниям и брошюрам. Быстрый старт от прототипа до финального релиза всего за полтора месяца. Проект постоянно развивается. Например, к последнему весеннему мероприятию SAP в функционал была добавлена навигация внутри помещений.
-
-							</p>
-							<p>
-								<a href="https://play.google.com/store/apps/details?id=com.jetteh.sap">Приложение в Google Play</a>
-								<a href="https://itunes.apple.com/ru/app/sap-cis-events/id844888933?mt=8" style="margin-left:20px;">Приложение в App Store</a>
-								<br>
-								<br><a style="margin-top:20px;" href="http://www.jetstyle.ru/portfolio/multimedia/mobilnye/prilozhenie_SAP_CIS_Events">Подробнее о разработке проекта</a>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>УГМК холдинг, ERP-система</h2>
+								<p class="item-intro text-muted">OLAP-инструмент для финансового планирования, моделирования, бюджетирования, аналитики и отчетности.
+								</p>
+								<img class="img-portfolio" src="img/portfolio/ugmk.png" alt="">
+								<p>Используется на предприятиях холдинга (почти 50 предприятий в 11 регионах России и за рубежом). Система удаленно собирает качественные и количественные показатели в различных срезах деятельности. Визуализация гибко настраивается. Используется конструктор домено-ориентированного языка Jison.
+								</p>
 
 								<ul class="list-inline">
 									<li>Дата: Июль 2014</li>
-									<li>Клиент: SAP</li>
-									<li>Категория: Мобильное приложение</li>
+									<li>Клиент: УГМК</li>
+									<li>Категория: ERP-система</li>
 								</ul>
 								<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="portfolio-modal modal fade" id="portfoliomodal5" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>SAP CIS Events</h2>
+								<p class="item-intro text-muted">Мобильное приложение для устройств iOS и Android. .
+								</p>
+								<img class="img-portfolio" src="img/portfolio/sapcis.jpg" alt="">
+								<p>Приложение информирует о предстоящих мероприятиях SAP и помогает на текущих. Удобная замена бумажным расписаниям и брошюрам. Быстрый старт от прототипа до финального релиза всего за полтора месяца. Проект постоянно развивается. Например, к последнему весеннему мероприятию SAP в функционал была добавлена навигация внутри помещений.
+
+								</p>
+								<p>
+									<a href="https://play.google.com/store/apps/details?id=com.jetteh.sap">Приложение в Google Play</a>
+									<a href="https://itunes.apple.com/ru/app/sap-cis-events/id844888933?mt=8" style="margin-left:20px;">Приложение в App Store</a>
+									<br>
+									<br><a style="margin-top:20px;" href="http://www.jetstyle.ru/portfolio/multimedia/mobilnye/prilozhenie_SAP_CIS_Events">Подробнее о разработке проекта</a>
+
+									<ul class="list-inline">
+										<li>Дата: Июль 2014</li>
+										<li>Клиент: SAP</li>
+										<li>Категория: Мобильное приложение</li>
+									</ul>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="portfolio-modal modal fade" id="portfoliomodal6" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>Час кода в России</h2>
+								<p class="item-intro text-muted">Высоконагруженный портал для акции «Час кода», проходившей с 4 по 12 декабря 2014 года. .
+								</p>
+								<img class="img-portfolio" src="img/portfolio/codehour.png" alt="">
+								<p>Акция проводилась Минобрнауки России совместно с Минкомсвязи России при участии ведущих ИТ-компаний: ВКонтакте, Лаборатория Касперского, Майкрософт, 1C, Дневник.ру, Акронис и была приурочена ко Дню информатики, который отмечается в Российской Федерации 4 декабря. «Час кода» - глобальное движение, которое охватывает десятки миллионов студентов и учеников в более чем 180 странах. Уроки продолжительностью в час не требуют никаких предварительных знаний. Доступны даже для четырехлетних детей.
+
+								</p>
+								<p>
+									<a href="http://www.coderussia.ru/">Веб-сайт проекта</a>
+
+									<ul class="list-inline">
+										<li>Дата: Июль 2014</li>
+										<li>Клиент: Microsoft</li>
+										<li>Категория: Веб-сервис</li>
+									</ul>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="portfolio-modal modal fade" id="portfoliomodal7" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>Адвекс</h2>
+								<p class="item-intro text-muted">Автоматизация деятельности агентства недвижимости «Адвекс», Тюмень .
+								</p>
+								<img class="img-portfolio" src="img/portfolio/advex.png" alt="">
+								<p>Система применяется в Тюменском отделении "Адвекс недвижимость". Система состоит из CRM, сайта и мобильного приложения. CRM аккумулирует оперативную информацию по клиентам и объектам агенства и позволяет эффективно ей управлять. Она позволяет менеджерам контролировать агентов, вести процесс сделки, искать и подбирать объекты. Сайт предназначен для конвертирования пользователей в клиентов и содержит множество способов получения контактов. Мобильное приложение разработано для агентов и даёт им возможность работать с объектами через носимые устройства.</p>
+								<p>
+									<a href="http://www.jetstyle.ru/portfolio/webdesign/intranet/complex_rabot_dlya_adveks">Описание кейса на сайте JetStyle</a>
+									<br>
+									<br><a style="margin-top:20px;" href="http://advecs-tmn.ru/popup/">Сайт компании «Адвекс»</a>
+
+									<ul class="list-inline">
+										<li>Дата: Июль 2014</li>
+										<li>Клиент: Advex</li>
+										<li>Категория: Автоматизация</li>
+									</ul>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="portfolio-modal modal fade" id="portfoliomodal8" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="lr">
+						<div class="rl">
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2>Deliv.me</h2>
+								<p class="item-intro text-muted">Веб-сервис курьерской доставки.</p>
+								<img class="img-portfolio" src="img/portfolio/delivme.png">
+								<p>
+									Сервис сочетает в себе CRM и посадочную страницу для клиентов. CRM связывает курьеров, отправителей и получателей грузов в единую систему, предоставляющую каждой группе аудитории свой сервис.
+								</p>
+								<p>
+									<a href="https://ridero.ru/">Веб-сайт проекта</a>
+									<ul class="list-inline">
+										<li>Дата: Июль 2014</li>
+										<li>Клиент: Ридеро</li>
+										<li>Категория: Стартап</li>
+									</ul>
+									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="portfolio-modal modal fade" id="portfoliomodal6" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>Час кода в России</h2>
-							<p class="item-intro text-muted">Высоконагруженный портал для акции «Час кода», проходившей с 4 по 12 декабря 2014 года. .
-							</p>
-							<img class="img-portfolio" src="img/portfolio/codehour.png" alt="">
-							<p>Акция проводилась Минобрнауки России совместно с Минкомсвязи России при участии ведущих ИТ-компаний: ВКонтакте, Лаборатория Касперского, Майкрософт, 1C, Дневник.ру, Акронис и была приурочена ко Дню информатики, который отмечается в Российской Федерации 4 декабря. «Час кода» - глобальное движение, которое охватывает десятки миллионов студентов и учеников в более чем 180 странах. Уроки продолжительностью в час не требуют никаких предварительных знаний. Доступны даже для четырехлетних детей.
-
-							</p>
-							<p>
-								<a href="http://www.coderussia.ru/">Веб-сайт проекта</a>
-
-								<ul class="list-inline">
-									<li>Дата: Июль 2014</li>
-									<li>Клиент: Microsoft</li>
-									<li>Категория: Веб-сервис</li>
-								</ul>
-								<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="portfolio-modal modal fade" id="portfoliomodal7" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>Адвекс</h2>
-							<p class="item-intro text-muted">Автоматизация деятельности агентства недвижимости «Адвекс», Тюмень .
-							</p>
-							<img class="img-portfolio" src="img/portfolio/advex.png" alt="">
-							<p>Система применяется в Тюменском отделении "Адвекс недвижимость". Система состоит из CRM, сайта и мобильного приложения. CRM аккумулирует оперативную информацию по клиентам и объектам агенства и позволяет эффективно ей управлять. Она позволяет менеджерам контролировать агентов, вести процесс сделки, искать и подбирать объекты. Сайт предназначен для конвертирования пользователей в клиентов и содержит множество способов получения контактов. Мобильное приложение разработано для агентов и даёт им возможность работать с объектами через носимые устройства.</p>
-							<p>
-								<a href="http://www.jetstyle.ru/portfolio/webdesign/intranet/complex_rabot_dlya_adveks">Описание кейса на сайте JetStyle</a>
-								<br>
-								<br><a style="margin-top:20px;" href="http://advecs-tmn.ru/popup/">Сайт компании «Адвекс»</a>
-
-								<ul class="list-inline">
-									<li>Дата: Июль 2014</li>
-									<li>Клиент: Advex</li>
-									<li>Категория: Автоматизация</li>
-								</ul>
-								<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="portfolio-modal modal fade" id="portfoliomodal8" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-content">
-			<div class="close-modal" data-dismiss="modal">
-				<div class="lr">
-					<div class="rl">
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2>Deliv.me</h2>
-							<p class="item-intro text-muted">Веб-сервис курьерской доставки.</p>
-							<img class="img-portfolio" src="img/portfolio/delivme.png">
-							<p>
-								Сервис сочетает в себе CRM и посадочную страницу для клиентов. CRM связывает курьеров, отправителей и получателей грузов в единую систему, предоставляющую каждой группе аудитории свой сервис.
-							</p>
-							<p>
-								<a href="https://ridero.ru/">Веб-сайт проекта</a>
-								<ul class="list-inline">
-									<li>Дата: Июль 2014</li>
-									<li>Клиент: Ридеро</li>
-									<li>Категория: Стартап</li>
-								</ul>
-								<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

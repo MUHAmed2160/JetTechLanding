@@ -27,15 +27,61 @@ $(document).ready(function () {
 
 	window.m_site = {
 		currentScreen: ko.observable("Main"),
+		scrolled: ko.observable(false),
 		serviceTypes: ["website", "app", "CRM", "complex", "enterprise"],
 		serviceTypeSelected: ko.observable("website"),
-		comboPopupOpen: ko.observable(false)
-	}
-	
-	var page=window.location.hash.replace(/#/g, '')||"Main"
-	console.log("PAGE",page)
-		goTo(page)
-	
+		comboPopupOpen: ko.observable(false),
+
+
+
+		sitecheck1: ko.observable(false)
+	};
+	window.m_site.m_calc = [{
+
+		label: 'Сайт',
+		checked: ko.observable(false),
+		price_rub: 100,
+		children: [
+			{
+				label: 'концепция',
+				checked: ko.observable(false),
+				price_rub: 150
+					},
+			{
+				label: 'custom дизайн',
+				checked: ko.observable(false),
+				price_rub: 110
+					},
+
+
+			]
+	}, {
+
+		label: 'Мобильное приложение',
+		checked: ko.observable(false),
+		price_rub: 100,
+		children: [
+			{
+				label: 'концепция',
+				checked: ko.observable(false),
+				price_rub: 150
+					},
+			{
+				label: 'custom дизайн',
+				checked: ko.observable(false),
+				price_rub: 110
+					},
+
+
+			]
+	}]
+
+
+
+	var page = window.location.hash.replace(/#/g, '') || "Main"
+	console.log("PAGE", page)
+	goTo(page)
+
 	ko.applyBindings(m_site);
 
 	//
@@ -154,8 +200,12 @@ ko.bindingHandlers.toggleClick = {
 	init: function (element, valueAccessor) {
 		var value = valueAccessor();
 
-		ko.utils.registerEventHandler(element, "click", function () {
+		ko.utils.registerEventHandler(element, "click", function (ev) {
 			value(!value());
+			console.log("registerEventHandler", ev)
+			ev.preventDefault()
+			return false
+
 		});
 	}
 };
@@ -171,6 +221,19 @@ window.addEventListener("hashchange", function (ev) {
 	goTo(pageName || "Main")
 }, false);
 
+
+var now = new Date().getTime();
+$(window).scroll(function () {
+	//	if (new Date().getTime() - now > 1000) {
+	//		if (window.pageYOffset > 350) {
+	//window.pageYOffset > 350?$("body").addClass("scrolled"):$("body").removeClass("scrolled")
+	m_site.scrolled(window.pageYOffset > 50)
+	console.log("Task executed once per second");
+	now = new Date().getTime();
+
+	//		}
+	//	}
+});
 
 window.goTo = function (scr) {
 	//	console.log("GOTO",scr)
