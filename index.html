@@ -60,7 +60,7 @@
 
 <body data-bind="css:{comboSelectorPopup_show:comboPopupOpen,scrolled:scrolled}">
 	<div class="pageWrapper">
-		<div class="page ContactForm bottomFixed  ">
+		<div class="page ContactForm bottomFixed  " data-bind="click:approximatePrice">
 			<div class="container">
 				<div>
 					<div class="project-manager-budget pull-right">
@@ -71,7 +71,7 @@
 									<i class="icon icon-circle-question js-tooltip" data-toggle="tooltip" data-tooltip-placement="bottom" title="" data-original-title="This is our estimate based on your current selections. We will work with you to refine this, and there are generally options for both more and less."></i>
 								</div>
 								<h3 class="text-muted">
-                                            <span class="text-muted eta"><em>Continue to get estimate</em></span>
+                                            <span class="text-muted eta" data-bind="text:approximatePrice_rub"><em>Continue to get estimate</em></span>
                                     </h3>
 							</div>
 						</div>
@@ -143,14 +143,17 @@
 								<label>
 									<input type="checkbox"> Дизайн</label>
 
-							</div>
+							</div>		click:$parent.radio?resetCheck($parent.children):null, 
 -->
 
 							<script type="text/html" id="calcGroup">
 								<ul class="list-group form-group" style="    color: #333;    clear: both;" data-bind="foreach:$data">
-									<li class="list-group-item" data-bind="toggleClick:checked,css:checked()? 'activecheck':'' ">
-										<i class="fa fa-check" 1data-bind="css:checked()?" 1data-bind="css:checked()?'fa-check':'fa-square-o' "></i> <span class="list-group-item-label" data-bind=" text:label"></span>
-										<div class="childrenGroup" data-bind="visible:checked && checked() && $data.children">
+									<li class="list-group-item" data-bind="
+									click:$parents[1].radio?m_site.resetCheck($parent):null, 
+									toggleClick:checked,
+									css:checked===true || (( typeof checked) =='function' && checked())? 'activecheck':'' ">
+										<i class="fa 1fa-check" data-bind="css:!$parents[1].radio?'fa-check':'fa-circle' " 1data-bind="css:checked()?'fa-check':'fa-square-o' "></i> <span class="list-group-item-label" data-bind=" text:label"></span>
+										<div class="childrenGroup" data-bind="visible:(checked===true || (( typeof checked) =='function' && checked()))&& $data.children">
 											<!-- ko template:{name:'calcGroup', data:$data.children} -->
 											<!-- /ko-->
 										</div>
@@ -216,30 +219,14 @@
 							</div>
 -->
 
-							<!--							веб-сайт
- концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
- красивый дизайн + верстка += 150000
- очуменный дизайн +=150000
- удобная админка +=100000
- прием платежей (visa/mastercard etc) +=100000
- интеграция с по клиента (1с/базы данных/другие api) +=100000
- высокая нагрузка (более ??? посетителей в сутки/одновременных) +=100000
-
-мобильное приложение
- концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
- платформа android +=120000
- платформа ios +=180000
- очуменный дизайн +=100000
- фоновая геолокация +=150000
- push-уведомления +=100000-->
 
 							<div class="form-group md-margin-top-large">
-								<input type="submit" value="Continue" class="btn btn-primary btn-lg btn-block xs-margin-top-large">
+								<input type="submit" value="Прикинуть" class="btn btn-primary btn-lg btn-block xs-margin-top-large">
 								<!--								<a class="btn btn-primary btn-lg" HREF="mailto:?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/">Write us</a>-->
 							</div>
 
 							<p class="paragraph-small zeta text-center">
-								By clicking on "Continue", you agree to the <a href="/terms" target="_blank">Terms &amp; Conditions</a>.
+<!--								By clicking on "Continue", you agree to the <a href="/terms" target="_blank">Terms &amp; Conditions</a>.-->
 							</p>
 
 						</div>

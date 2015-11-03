@@ -23,58 +23,24 @@ $('a.page-scroll').click(function () {
 
 $(document).ready(function () {
 
+	/*
+		веб-сайт
+	 концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
+	 красивый дизайн + верстка += 150000
+	 очуменный дизайн +=150000
+	 удобная админка +=100000
+	 прием платежей (visa/mastercard etc) +=100000
+	 интеграция с по клиента (1с/базы данных/другие api) +=100000
+	 высокая нагрузка (более ??? посетителей в сутки/одновременных) +=100000
 
-
-	window.m_site = {
-		currentScreen: ko.observable("Main"),
-		scrolled: ko.observable(false),
-		serviceTypes: ["website", "app", "CRM", "complex", "enterprise"],
-		serviceTypeSelected: ko.observable("website"),
-		comboPopupOpen: ko.observable(false),
-
-
-
-		sitecheck1: ko.observable(false)
-	};
-	window.m_site.m_calc = [{
-
-		label: 'Сайт',
-		checked: ko.observable(false),
-		price_rub: 100,
-		children: [
-			{
-				label: 'концепция',
-				checked: ko.observable(false),
-				price_rub: 150
-					},
-			{
-				label: 'custom дизайн',
-				checked: ko.observable(false),
-				price_rub: 110
-					},
-
-
-			]
-	}, {
-
-		label: 'Мобильное приложение',
-		checked: ko.observable(false),
-		price_rub: 100,
-		children: [
-			{
-				label: 'концепция',
-				checked: ko.observable(false),
-				price_rub: 150
-					},
-			{
-				label: 'custom дизайн',
-				checked: ko.observable(false),
-				price_rub: 110
-					},
-
-
-			]
-	}]
+	мобильное приложение
+	 концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
+	 платформа android +=120000
+	 платформа ios +=180000
+	 очуменный дизайн +=100000
+	 фоновая геолокация +=150000
+	 push-уведомления +=100000
+	 */
 
 
 
@@ -83,56 +49,203 @@ $(document).ready(function () {
 	goTo(page)
 
 	ko.applyBindings(m_site);
-
-	//
-	//			$(".comboSelector").click(function (e, el) {
-	//				console.log(e, el)
-	//				$("body").addClass("comboSelectorPopup_show")
-	//			})
-	//			$("#team").owlCarousel({
-	//
-	//				navigation: false, // Show next and prev buttons
-	//				slideSpeed: 300,
-	//				paginationSpeed: 400,
-	//				autoHeight: true,
-	//				itemsCustom: [
-	//				        [0, 1],
-	//				        [450, 2],
-	//				        [600, 2],
-	//				        [700, 2],
-	//				        [1000, 4],
-	//				        [1200, 4],
-	//				        [1400, 4],
-	//				        [1600, 4]
-	//				      ],
-	//			});
-	//
-	//			$("#clients").owlCarousel({
-	//
-	//				navigation: false, // Show next and prev buttons
-	//				slideSpeed: 300,
-	//				paginationSpeed: 400,
-	//				autoHeight: true,
-	//				itemsCustom: [
-	//				        [0, 1],
-	//				        [450, 2],
-	//				        [600, 2],
-	//				        [700, 2],
-	//				        [1000, 4],
-	//				        [1200, 5],
-	//				        [1400, 5],
-	//				        [1600, 5]
-	//				      ],
-	//			});
-	//
-	//			$("#testimonial").owlCarousel({
-	//				navigation: false, // Show next and prev buttons
-	//				slideSpeed: 300,
-	//				paginationSpeed: 400,
-	//				singleItem: true
-	//			});
-
+	m_site.approximatePrice()
 });
+window.m_site = {
+	currentScreen: ko.observable("Main"),
+	scrolled: ko.observable(false),
+	serviceTypes: ["website", "app", "CRM", "complex", "enterprise"],
+	serviceTypeSelected: ko.observable("website"),
+	comboPopupOpen: ko.observable(false),
+	approximatePrice_rub: ko.observable(0),
+
+
+
+	sitecheck1: ko.observable(false)
+};
+window.m_site.m_calc = [{
+
+	label: 'Сайт',
+	checked:  ko.observable(false),
+	//	checked: ko.observable(false),
+	price_rub: 100,
+	children: [
+		{
+			label: 'Проектирование',
+			checked: true,
+			price_rub: 00
+},
+
+
+		{
+			label: 'дизайн',
+			checked: true,
+			price_rub: 0,
+			radio: true,
+			children: [
+				{
+					label: 'у меня уже есть',
+					checked: ko.observable(false),
+					price_rub: 0
+}, {
+					label: 'стоковый',
+					checked: ko.observable(true),
+					price_rub: 50,
+}, {
+					label: 'модный',
+					checked: ko.observable(false),
+					price_rub: 50
+},
+]
+}, {
+			label: 'админка',
+			checked: ko.observable(false),
+			price_rub: 0,
+			radio: true,
+			children: [
+				{
+					label: 'не нужно',
+					checked: ko.observable(false),
+					price_rub: 0
+}, {
+					label: 'простая',
+					checked: ko.observable(true),
+					price_rub: 50,
+}, {
+					label: 'крутая',
+					checked: ko.observable(false),
+					price_rub: 150
+}, {
+					label: 'весь сайт и есть админка',
+					checked: ko.observable(false),
+					price_rub: 300
+},
+]
+}, {
+			label: 'уникальных страниц/экранов интерфейса',
+			checked: true,
+			price_rub: 0,
+			radio: true,
+			children: [
+				{
+					label: '1-3',
+					checked: ko.observable(false),
+					price_rub: 0
+}, {
+					label: '3-10',
+					checked: ko.observable(true),
+					price_rub: 50,
+}, {
+					label: '10-20',
+					checked: ko.observable(false),
+					price_rub: 150
+}, {
+					label: '20+',
+					checked: ko.observable(false),
+					price_rub: 300
+},
+]
+}, {
+			label: 'роли пользователей',
+			checked: ko.observable(false),
+			price_rub: 100
+}, {
+			label: 'личные кабинеты',
+			checked: ko.observable(false),
+			price_rub: 100
+}, {
+			label: 'регистрация пользователей',
+			checked: ko.observable(false),
+			price_rub: 100
+}, {
+			label: 'социальные сети (авторизация, забор данных)',
+			checked: ko.observable(false),
+			price_rub: 100
+}, {
+			label: 'прием платежей (visa/mastercard etc)',
+			checked: ko.observable(false),
+			price_rub: 100
+},
+		{
+			label: ' интеграция с по клиента (1с/базы данных/другие api)',
+			checked: ko.observable(false),
+			price_rub: 150
+}, {
+			label: 'импорт данных (переезд)',
+			checked: ko.observable(false),
+			price_rub: 150
+},
+		{
+			label: 'высокая нагрузка',
+			checked: ko.observable(false),
+			price_rub: 400
+},
+
+
+]
+}, {
+
+	label: 'Мобильное приложение',
+	checked: ko.observable(false),
+	price_rub: 100,
+	children: [
+		{
+			label: 'концепция',
+			checked: ko.observable(false),
+			price_rub: 150
+},
+		{
+			label: 'custom дизайн',
+			checked: ko.observable(false),
+			price_rub: 110
+},
+
+
+]
+}]
+
+m_site.approximatePrice = function (elms) {
+
+	//	window.m_site.m_calc[0].children.forEach(function (el) {
+	//		console.log(el.price_rub, el.checked)
+	//		if (el.price_rub && typeof (el.checked) == "function" && el.checked()) sum += el.price_rub
+	//	})
+	var sum = iteratePriceItems(window.m_site.m_calc)
+	console.log("sum", sum)
+
+	sum = Math.floor(sum / 100) * 100
+	var sumret = Math.floor(sum * .7 / 100) * 100 + " - " + Math.floor(sum * 1.3 / 100) * 100
+
+	m_site.approximatePrice_rub(sumret)
+	return sum
+}
+
+function iteratePriceItems(itms) {
+	//	console.log("itms",itms)
+	var mysum = 0
+	itms.forEach(function (el) {
+
+		if (
+			(typeof (el.checked) == "function" && el.checked()) ||
+			el.checked === true
+		) {
+			if (el.price_rub != undefined) mysum += el.price_rub
+			console.log("CHECK", el.label, el.price_rub)
+			if (el.children) mysum += iteratePriceItems(el.children)
+		}
+
+	})
+	return mysum
+
+}
+m_site.resetCheck = function (elms) {
+	//	console.log(elms)
+	elms.forEach(function (el) {
+		//		console.log(el)
+		el.checked(false)
+	})
+	setTimeout(m_site.approximatePrice, 100)
+}
 
 /*====================================
     Portfolio Isotope Filter
@@ -201,8 +314,9 @@ ko.bindingHandlers.toggleClick = {
 		var value = valueAccessor();
 
 		ko.utils.registerEventHandler(element, "click", function (ev) {
-			value(!value());
-			console.log("registerEventHandler", ev)
+			if ((typeof value) == 'function') value(!value());
+			//			console.log("registerEventHandler", ev)
+			m_site.approximatePrice()
 			ev.preventDefault()
 			return false
 

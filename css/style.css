@@ -1649,6 +1649,7 @@ body.scrolled nav#tf-menu {
     background-color: #4E4946;
     color: #fff;
 }
+body.scrolled .project-manager-budget{position:fixed;right:20px}
 
 .inlineGrayBg {
     background-color: #383331;
@@ -1670,18 +1671,25 @@ body.scrolled nav#tf-menu {
     /* border-top: 1px solid #ccc; */
     border-color: transparent;
     cursor:pointer
+;
+    /* text-transform: lowercase; */
 }
+.projectCalc .list-group-item-label:first-letter {color:red}
 .projectCalc li.list-group-item:hover {/* background-color:#eee */}
 .projectCalc li.list-group-item:active {/* background-color:#ddd */}
 .projectCalc li.list-group-item .list-group-item-label {
     /* padding: 10px 0; */
     line-height: 35px;
 }
-.projectCalc .list-group-item> .fa-check {
+.projectCalc .list-group-item> i {
     opacity: .3
+;
+    /* color: orange; */
+    margin-right: 3px;
 }
-.projectCalc .list-group-item.activecheck >.fa-check {
+.projectCalc .list-group-item.activecheck >i {
     opacity: 1
+;color: orange;
 }
 
 
