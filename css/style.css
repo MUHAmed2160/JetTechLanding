@@ -1681,11 +1681,13 @@ body.scrolled .project-manager-budget{position:fixed;right:20px}
     /* padding: 10px 0; */
     line-height: 35px;
 }
+.projectCalc> ul >li >.list-group-item-label {font-weight:bold}
 .projectCalc .list-group-item> i {
     opacity: .3
 ;
     /* color: orange; */
     margin-right: 3px;
+    /* background-color: #E6DDC8; */      padding: 3px;
 }
 .projectCalc .list-group-item.activecheck >i {
     opacity: 1
@@ -1695,4 +1697,5 @@ body.scrolled .project-manager-budget{position:fixed;right:20px}
 
 .projectCalc .childrenGroup {
     padding-left: 10px;
+    /* border: 1px solid #ddd; */
 }

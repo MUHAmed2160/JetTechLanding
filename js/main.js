@@ -1,6 +1,6 @@
 /* ==============================================
-  	Testimonial Slider
-  	=============================================== */
+Testimonial Slider
+=============================================== */
 
 $('a.page-scroll').click(function () {
 	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -24,23 +24,23 @@ $('a.page-scroll').click(function () {
 $(document).ready(function () {
 
 	/*
-		веб-сайт
-	 концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
-	 красивый дизайн + верстка += 150000
-	 очуменный дизайн +=150000
-	 удобная админка +=100000
-	 прием платежей (visa/mastercard etc) +=100000
-	 интеграция с по клиента (1с/базы данных/другие api) +=100000
-	 высокая нагрузка (более ??? посетителей в сутки/одновременных) +=100000
+	веб-сайт
+	концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
+	красивый дизайн + верстка += 150000
+	очуменный дизайн +=150000
+	удобная админка +=100000
+	прием платежей (visa/mastercard etc) +=100000
+	интеграция с по клиента (1с/базы данных/другие api) +=100000
+	высокая нагрузка (более ??? посетителей в сутки/одновременных) +=100000
 
 	мобильное приложение
-	 концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
-	 платформа android +=120000
-	 платформа ios +=180000
-	 очуменный дизайн +=100000
-	 фоновая геолокация +=150000
-	 push-уведомления +=100000
-	 */
+	концепция (проектирование интерфейса, разделение функционала по страницам) +=150000
+	платформа android +=120000
+	платформа ios +=180000
+	очуменный дизайн +=100000
+	фоновая геолокация +=150000
+	push-уведомления +=100000
+	*/
 
 
 
@@ -58,150 +58,194 @@ window.m_site = {
 	serviceTypeSelected: ko.observable("website"),
 	comboPopupOpen: ko.observable(false),
 	approximatePrice_rub: ko.observable(0),
-
-
-
-	sitecheck1: ko.observable(false)
 };
 window.m_site.m_calc = [{
 
 	label: 'Сайт',
-	checked:  ko.observable(false),
+	checked: ko.observable(false),
 	//	checked: ko.observable(false),
-	price_rub: 100,
+	price_rub: "+100",
 	children: [
 		{
 			label: 'Проектирование',
 			checked: true,
-			price_rub: 00
-},
-
-
-		{
-			label: 'дизайн',
+			price_rub: "+0"
+		}, {
+			label: 'Дизайн',
 			checked: true,
-			price_rub: 0,
+			price_rub: "+0",
 			radio: true,
 			children: [
 				{
 					label: 'у меня уже есть',
 					checked: ko.observable(false),
-					price_rub: 0
-}, {
+					price_rub: "*1"
+				}, {
 					label: 'стоковый',
 					checked: ko.observable(true),
-					price_rub: 50,
-}, {
+					price_rub: "*.8",
+				}, {
 					label: 'модный',
 					checked: ko.observable(false),
-					price_rub: 50
-},
-]
-}, {
-			label: 'админка',
+					price_rub: "*1.3"
+				},
+			]
+		}, {
+			label: 'Админка',
 			checked: ko.observable(false),
-			price_rub: 0,
+			price_rub: "+0",
 			radio: true,
 			children: [
 				{
 					label: 'не нужно',
 					checked: ko.observable(false),
-					price_rub: 0
-}, {
+					price_rub: "+0"
+				}, {
 					label: 'простая',
 					checked: ko.observable(true),
-					price_rub: 50,
-}, {
+					price_rub: "+50",
+				}, {
 					label: 'крутая',
 					checked: ko.observable(false),
-					price_rub: 150
-}, {
+					price_rub: "+150"
+				}, {
 					label: 'весь сайт и есть админка',
 					checked: ko.observable(false),
-					price_rub: 300
-},
-]
-}, {
-			label: 'уникальных страниц/экранов интерфейса',
+					price_rub: "+300"
+				},
+			]
+		}, {
+			label: 'Уникальных страниц/экранов интерфейса',
 			checked: true,
-			price_rub: 0,
+			price_rub: "+0",
 			radio: true,
 			children: [
 				{
 					label: '1-3',
 					checked: ko.observable(false),
-					price_rub: 0
-}, {
+					price_rub: "+0"
+				}, {
 					label: '3-10',
 					checked: ko.observable(true),
-					price_rub: 50,
-}, {
+					price_rub: "+50",
+				}, {
 					label: '10-20',
 					checked: ko.observable(false),
-					price_rub: 150
-}, {
+					price_rub: "+150"
+				}, {
 					label: '20+',
 					checked: ko.observable(false),
-					price_rub: 300
-},
-]
-}, {
-			label: 'роли пользователей',
+					price_rub: "+300"
+				},
+			]
+		}, {
+			label: 'Роли пользователей',
 			checked: ko.observable(false),
-			price_rub: 100
-}, {
-			label: 'личные кабинеты',
+			price_rub: "+100"
+		}, {
+			label: 'Личные кабинеты',
 			checked: ko.observable(false),
-			price_rub: 100
-}, {
-			label: 'регистрация пользователей',
+			price_rub: "+100"
+		}, {
+			label: 'Регистрация пользователей',
 			checked: ko.observable(false),
-			price_rub: 100
-}, {
-			label: 'социальные сети (авторизация, забор данных)',
+			price_rub: "+100"
+		}, {
+			label: 'Социальные сети (авторизация, забор данных)',
 			checked: ko.observable(false),
-			price_rub: 100
-}, {
-			label: 'прием платежей (visa/mastercard etc)',
+			price_rub: "+100"
+		}, {
+			label: 'Прием платежей (visa/mastercard etc)',
 			checked: ko.observable(false),
-			price_rub: 100
-},
-		{
-			label: ' интеграция с по клиента (1с/базы данных/другие api)',
+			price_rub: "+100"
+		}, {
+			label: ' Интеграция с по клиента (1с/базы данных/другие api)',
 			checked: ko.observable(false),
-			price_rub: 150
-}, {
-			label: 'импорт данных (переезд)',
+			price_rub: "+150"
+		}, {
+			label: 'Импорт данных (переезд)',
 			checked: ko.observable(false),
-			price_rub: 150
-},
-		{
-			label: 'высокая нагрузка',
+			price_rub: "+150"
+		}, {
+			label: 'Высокая нагрузка',
 			checked: ko.observable(false),
-			price_rub: 400
-},
-
-
-]
+			price_rub: "*2"
+		},
+	]
 }, {
 
 	label: 'Мобильное приложение',
 	checked: ko.observable(false),
-	price_rub: 100,
+	price_rub: "+100",
 	children: [
 		{
-			label: 'концепция',
-			checked: ko.observable(false),
-			price_rub: 150
-},
+			label: 'Проектирование',
+			checked: true,
+			price_rub: "+0"
+		},
+
 		{
-			label: 'custom дизайн',
+			label: 'Дизайн',
+			checked: true,
+			price_rub: "+0",
+			radio: true,
+			children: [
+				{
+					label: 'у меня уже есть',
+					checked: ko.observable(false),
+					price_rub: "*1"
+				}, {
+					label: 'стоковый',
+					checked: ko.observable(true),
+					price_rub: "*.8",
+				}, {
+					label: 'модный',
+					checked: ko.observable(false),
+					price_rub: "*1.3"
+				},
+			]
+		}, {
+			label: 'Уникальных страниц/экранов интерфейса',
+			checked: true,
+			price_rub: "+0",
+			radio: true,
+			children: [
+				{
+					label: '1-3',
+					checked: ko.observable(false),
+					price_rub: "+0"
+				}, {
+					label: '3-10',
+					checked: ko.observable(true),
+					price_rub: "+50",
+				}, {
+					label: '10-20',
+					checked: ko.observable(false),
+					price_rub: "+250"
+				}, {
+					label: '20+',
+					checked: ko.observable(false),
+					price_rub: "+500"
+				},
+			]
+		}, {
+			label: 'Android',
+			checked: ko.observable(true),
+			price_rub: "+100"
+		}, {
+			label: 'iOS',
 			checked: ko.observable(false),
-			price_rub: 110
-},
-
-
-]
+			price_rub: "+100"
+		}, {
+			label: 'фоновая геолокация',
+			checked: ko.observable(false),
+			price_rub: "+100"
+		}, {
+			label: 'push-уведомления',
+			checked: ko.observable(false),
+			price_rub: "+50"
+		},
+	]
 }]
 
 m_site.approximatePrice = function (elms) {
@@ -210,10 +254,13 @@ m_site.approximatePrice = function (elms) {
 	//		console.log(el.price_rub, el.checked)
 	//		if (el.price_rub && typeof (el.checked) == "function" && el.checked()) sum += el.price_rub
 	//	})
-	var sum = iteratePriceItems(window.m_site.m_calc)
-	console.log("sum", sum)
+	var sum = 50
+	window.m_site.m_calc.forEach(function (el) {
+		var sumobj = iteratePriceItems([el])
+		console.log("sum", sumobj, ("(0" + (sumobj['sum'] || '') + ")" + (sumobj.coeff || '')))
 
-	sum = Math.floor(sum / 100) * 100
+		sum += Math.floor((eval("(0" + (sumobj['sum'] || '') + ")" + (sumobj.coeff || ''))) / 100) * 100
+	})
 	var sumret = Math.floor(sum * .7 / 100) * 100 + " - " + Math.floor(sum * 1.3 / 100) * 100
 
 	m_site.approximatePrice_rub(sumret)
@@ -222,20 +269,35 @@ m_site.approximatePrice = function (elms) {
 
 function iteratePriceItems(itms) {
 	//	console.log("itms",itms)
-	var mysum = 0
+	var mysum = ""
+	var mycoeff = ""
 	itms.forEach(function (el) {
 
 		if (
 			(typeof (el.checked) == "function" && el.checked()) ||
 			el.checked === true
 		) {
-			if (el.price_rub != undefined) mysum += el.price_rub
+			if (el.price_rub != undefined) {
+				if (el.price_rub.indexOf("*") !== -1) {
+					mycoeff += el.price_rub
+				} else {
+					mysum += el.price_rub
+				}
+			}
 			console.log("CHECK", el.label, el.price_rub)
-			if (el.children) mysum += iteratePriceItems(el.children)
+				//			if (el.children) mysum += "("+iteratePriceItems(el.children)+")"
+			if (el.children) {
+				var childsums = iteratePriceItems(el.children)
+				mysum += childsums.sum
+				mycoeff += childsums.coeff
+			}
 		}
 
 	})
-	return mysum
+	return {
+		sum: mysum,
+		coeff: mycoeff
+	}
 
 }
 m_site.resetCheck = function (elms) {
@@ -248,8 +310,8 @@ m_site.resetCheck = function (elms) {
 }
 
 /*====================================
-    Portfolio Isotope Filter
-    ======================================*/
+Portfolio Isotope Filter
+======================================*/
 //$(window).load(function () {
 //	var $container = $('#lightbox');
 //	$container.isotope({
@@ -280,33 +342,33 @@ m_site.resetCheck = function (elms) {
 
 
 /*====================================
-    Portfolio Item Open
-    ======================================*/
-$('#portfoliomodal1').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-$('#portfoliomodal2').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-$('#portfoliomodal3').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-$('#portfoliomodal4').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-$('#portfoliomodal5').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-$('#portfoliomodal6').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-$('#portfoliomodal7').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-$('#portfoliomodal8').on('shown.bs.modal', function () {
-	$('#myInput').focus()
-})
-
+Portfolio Item Open
+======================================*/
+//$('#portfoliomodal1').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//$('#portfoliomodal2').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//$('#portfoliomodal3').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//$('#portfoliomodal4').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//$('#portfoliomodal5').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//$('#portfoliomodal6').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//$('#portfoliomodal7').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//$('#portfoliomodal8').on('shown.bs.modal', function () {
+//	$('#myInput').focus()
+//})
+//
 
 
 ko.bindingHandlers.toggleClick = {
