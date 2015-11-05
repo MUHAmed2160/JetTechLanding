@@ -21,7 +21,7 @@ $('a.page-scroll').click(function () {
 //        offset: 80
 //    })
 
-$(document).ready(function () {
+$(document).includeReady(function () {
 
 	/*
 	веб-сайт
@@ -50,6 +50,9 @@ $(document).ready(function () {
 
 	ko.applyBindings(m_site);
 	m_site.approximatePrice()
+
+	$(".btn-closemodal").attr("href","#")
+
 });
 window.m_site = {
 	currentScreen: ko.observable("Main"),
@@ -410,9 +413,10 @@ $(window).scroll(function () {
 	//		}
 	//	}
 });
-
+var scrolledPages = {}
 window.goTo = function (scr) {
 	//	console.log("GOTO",scr)
+	scrolledPages[m_site.currentScreen()] = $(window).scrollTop()
 	m_site.currentScreen(scr)
 
 	//	$(".modal").modal('hide')
@@ -421,8 +425,17 @@ window.goTo = function (scr) {
 	if ($newscr.length == 0) return
 	if (!$newscr.hasClass("popup")) {
 		$(".page").hide(00, function () {
-				$newscr.show(00)
-			}) //.removeClass("selected")
+			$newscr.show(00, function () {
+				setTimeout(function () {
+					if (!scrolledPages[scr]) {
+						//					scrolledPages[scr] = true
+						if (scr != "Main") $(window).scrollTop(0)
+					} else {
+						$(window).scrollTop(scrolledPages[scr])
+					}
+				}, 300)
+			})
+		})
 
 	} else {
 		$newscr.find(".modal").modal('toggle')

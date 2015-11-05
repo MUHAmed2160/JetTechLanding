@@ -102,7 +102,7 @@ a:focus {
     /* background-color: #fff; */
     /* height: 100%; */
     
-    padding-top: 80px;
+    padding-top: 100px;
     padding-bottom: 60px;
 }
 
@@ -328,8 +328,14 @@ ul.about-list >li {
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
     /* padding: 20px; */
     
-    list-style: none;
+    /* list-style: square; */
     margin-bottom: 20px;
+    /* background-color: #383331; */      
+    /* box-shadow: 0px 0px 0px 7px #383331; */
+    /* color: #fff; */
+    /* display: inline-block; */
+    /* margin: 0 1%; */
+    list-style: none;
 }
 
 ul.about-list li .fa {
@@ -510,7 +516,7 @@ img.img-circle.team-img {
     /* color: #333; */
     /* background-color: #fff; */
     
-    background-color: orange;
+    background-color: white;
 }
 
 #tf-services a {
@@ -518,6 +524,8 @@ img.img-circle.team-img {
     /* border-bottom: 1px dashed orange; */
     
     border-bottom: 1px dashed #333;
+    /* color: #fff; */
+    /* border-bottom: 1px dashed #fff; */
 }
 
 .space {
@@ -991,7 +999,12 @@ ol.type li a.active {
     }
 }
 .img-portfolio {
-    width: 100%;
+    /* width: 100%; */
+    /* padding: 20px; */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    margin: 20px auto;
+    /* display: inline-block; */
+    box-shadow: 1px 1px 5px 0px #000;
 }
 .portfolio-item .hover-bg {
     height: 260px;
@@ -1510,21 +1523,23 @@ section#tf-services .about-list {
     /* list-style: initial; */
     /* background-color: #fff; */
     /* color: #3A2D21; */
-    /* padding: 0 60px; */
+    padding: 10px 40px;
     
     border-radius: 10px;
     /* list-style-type: disc; */
     /* list-style: initial; */
     
-    border: 5px solid orange;
+    /* border: 5px solid orange; */
     /* background-color: #4A403A; */
     /* background-color: #fff; */
     
     color: #333;
     line-height: 2em;
+    padding-top: 20px;
 }
 section#tf-services .about-list li {
     /* line-height: 2em; */
+    list-style: square;
 }
 a.hoverExplainer {
 }
@@ -1620,7 +1635,7 @@ ul.serviceTextBlock li {
 }
 ul.serviceTextBlock li i.fa {
     margin-left: -35px;
-    margin-right: 10px
+    margin-right: 10px;display: none;
 }
 ul.serviceTextBlock h4 {
     font-weight: 600;
@@ -1636,7 +1651,7 @@ section.orange h2 {
 }
 i.iconpic {
     font-size: 150px;
-    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.7);
+    /* text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.7); */
     color: orange;
 }
 .page.Main {
@@ -1698,4 +1713,16 @@ body.scrolled .project-manager-budget{position:fixed;right:20px}
 .projectCalc .childrenGroup {
     padding-left: 10px;
     /* border: 1px solid #ddd; */
+}
+
+.btn-closemodal {
+    border-radius: 0;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff!important;
+    background-color:  #4E4946;
+    z-index: 11111;
 }
