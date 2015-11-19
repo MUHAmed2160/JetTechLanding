@@ -980,7 +980,7 @@ ol.type li a.active {
 }
 .portfolio-item {
     margin-bottom: 30px;
-    box-shadow: 1px 1px 5px 0px #000;
+    /* box-shadow: 1px 1px 5px 0px #000; */
 }
 @media(max-width: 768px) {
     .isotope-item {
@@ -1024,14 +1024,16 @@ ol.type li a.active {
 .portfolio-item-marker {
     position: absolute;
     left: 0;
-    top: 22px;
+    top: 8px;
     background-color: #FDA400;
-    z-index: 1;
+    z-index: 1000;
     padding: 5px 10px;
-    color: #fff;
+    color: #292624;
+    box-shadow: 0px 0px 0px 1px #292624;
+    font-size: .8em;
 }
 .hover-bg:hover .portfolio-item-marker {
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 .hover-bg .hover-text {
     position: absolute;
@@ -1065,6 +1067,7 @@ ol.type li a.active {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     transition: all 0.3s;
+    font-size: 2em;
 }
 .hover-bg:hover .hover-text>i {
     opacity: 1;
@@ -1120,7 +1123,7 @@ ol.type li a.active {
     background: #fff;
     padding: 20px 40px;
     margin: 0px 10px;
-    font-weight: 300px;
+    font-weight: 500;
     text-align: center;
     /* color: #fff; */
     
@@ -1498,7 +1501,7 @@ nav#footer p {
     /* background-color: #333; */
 }
 section {
-    padding: 30px 0;
+    padding: 50px 0;
     background-color: #292624;
     color: #fff;
 }
@@ -1657,9 +1660,13 @@ section.orange h2 {
     float: right;
 }
 i.iconpic {
-    font-size: 150px;
+    /* font-size: 150px; */
     /* text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.7); */
-    color: orange;
+    /* color: orange; */
+    /* float: left; */
+    /* font-size: 2em; */
+    margin-right: .5em;
+    margin-left: -2em;
 }
 .page.Main {
     padding-top: 0px;
@@ -1671,7 +1678,7 @@ body.scrolled nav#tf-menu {
     background-color: #4E4946;
     color: #fff;
 }
-body.scrolled .project-manager-budget{position:fixed;right:20px}
+body.scrolled .project-manager-budget{position:fixed;right: 14px;z-index: 1;}
 
 .inlineGrayBg {
     background-color: #383331;
@@ -1683,6 +1690,7 @@ body.scrolled .project-manager-budget{position:fixed;right:20px}
 }
 
 .projectCalc {
+    margin-bottom: 4em;
 }
 .projectCalc ul.list-group {
 }
@@ -1710,6 +1718,8 @@ body.scrolled .project-manager-budget{position:fixed;right:20px}
     /* color: orange; */
     margin-right: 3px;
     /* background-color: #E6DDC8; */      padding: 3px;
+    /* color: #fff; */
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.34),-1px 1px 1px rgba(0, 0, 0, 0.34),1px -1px 1px rgba(0, 0, 0, 0.34),-1px -1px 1px rgba(0, 0, 0, 0.34); */
 }
 .projectCalc .list-group-item.activecheck >i {
     opacity: 1
@@ -1733,3 +1743,49 @@ body.scrolled .project-manager-budget{position:fixed;right:20px}
     background-color:  #4E4946;
     z-index: 11111;
 }
+
+.panel.panel-default {
+    background-color: orange;      border: 0;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.projectsList {}
+.projectsList li{
+    list-style: none;
+    background-color: #333;
+    margin: 0.5em 0;
+    padding: 0 5px;
+    display: inline;
+    /* border-bottom: 1px dotted #666; */
+    margin-right: 1em;
+    line-height: 2em;
+    box-shadow: 0px 0px 0px 3px #333;
+    display: inline-block;
+    font-weight: 100;
+}
+
+a h3 {
+    border-bottom: 1px dashed orange;;
+    display: inline-block;
+    cursor:pointer
+}
+a:hover h3{}

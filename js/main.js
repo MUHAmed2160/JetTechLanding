@@ -51,20 +51,20 @@ $(document).includeReady(function () {
 	ko.applyBindings(m_site);
 	m_site.approximatePrice()
 
-	$(".btn-closemodal").attr("href","#")
+	$(".btn-closemodal").attr("href", "#")
 
 });
 window.m_site = {
 	currentScreen: ko.observable("Main"),
 	scrolled: ko.observable(false),
-	serviceTypes: ["website", "app", "CRM", "complex", "enterprise"],
-	serviceTypeSelected: ko.observable("website"),
+	serviceTypes: ["Веб-проект", "Мобильное приложение"], //, "CRM", "complex", "enterprise"
+	serviceTypeSelected: ko.observable("Веб-проект"),
 	comboPopupOpen: ko.observable(false),
 	approximatePrice_rub: ko.observable(0),
 };
 window.m_site.m_calc = [{
 
-	label: 'Сайт',
+	label: 'Веб-проект',
 	checked: ko.observable(false),
 	//	checked: ko.observable(false),
 	price_rub: "+100",
@@ -84,11 +84,11 @@ window.m_site.m_calc = [{
 					checked: ko.observable(false),
 					price_rub: "*1"
 				}, {
-					label: 'стоковый',
+					label: 'шаблонный',
 					checked: ko.observable(true),
 					price_rub: "*.8",
 				}, {
-					label: 'модный',
+					label: 'индивидуальный',
 					checked: ko.observable(false),
 					price_rub: "*1.3"
 				},
@@ -154,15 +154,15 @@ window.m_site.m_calc = [{
 			checked: ko.observable(false),
 			price_rub: "+100"
 		}, {
-			label: 'Социальные сети (авторизация, забор данных)',
+			label: 'Социальные сети (авторизация, сбор данных)',
 			checked: ko.observable(false),
 			price_rub: "+100"
 		}, {
-			label: 'Прием платежей (visa/mastercard etc)',
+			label: 'Прием платежей (аггрегаторы / эквайринг)',
 			checked: ko.observable(false),
 			price_rub: "+100"
 		}, {
-			label: ' Интеграция с по клиента (1с/базы данных/другие api)',
+			label: ' Интеграция с вашим ПО (1С / базы данных / другие API)',
 			checked: ko.observable(false),
 			price_rub: "+150"
 		}, {
@@ -251,6 +251,15 @@ window.m_site.m_calc = [{
 	]
 }]
 
+m_site.approximatePrice = ko.computed(function () {
+	console.log("serviceTypeSelected", m_site.serviceTypeSelected())
+	window.m_site.m_calc.forEach(function (el) {
+
+		console.log("el", el)
+		el.checked(el && el.label == m_site.serviceTypeSelected())
+	})
+})
+
 m_site.approximatePrice = function (elms) {
 
 	//	window.m_site.m_calc[0].children.forEach(function (el) {
@@ -264,7 +273,12 @@ m_site.approximatePrice = function (elms) {
 
 		sum += Math.floor((eval("(0" + (sumobj['sum'] || '') + ")" + (sumobj.coeff || ''))) / 100) * 100
 	})
-	var sumret = Math.floor(sum * .7 / 100) * 100 + " - " + Math.floor(sum * 1.3 / 100) * 100
+	var s1 = Math.floor(sum * .7 / 100) * 100
+	var s2 = Math.floor(sum * 1.3 / 100) * 100
+	var sumret = s1 + " - " + s2
+
+	if (sumret == "0 - 0") sumret = "Не выбрано"
+	if (s1 == s2) sumret = "~" + s1
 
 	m_site.approximatePrice_rub(sumret)
 	return sum
