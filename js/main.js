@@ -411,6 +411,8 @@ ko.bindingHandlers.click.preprocess = function (val) {
 window.addEventListener("hashchange", function (ev) {
 	var pageName = ev.newURL.split("#")[1]
 	console.log(ev, pageName)
+//	var page=$(".page."+pageName)
+//	if(page.length>0){goTo(pageName || "Main")}else{ return true}
 	goTo(pageName || "Main")
 }, false);
 

@@ -252,7 +252,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right" data-bind="visible:m_site.currentScreen()=='Main'">
 						<!--<li><a href="#Main" class="page-scroll">Начало</a></li>-->
 						<li><a href="#tf-services" class="page-scroll">Услуги</a>
 						</li>
@@ -337,12 +337,13 @@
 							</li>
 							<li>
 								<!--								<span class="fa fa-check"></span> -->
-								Клиенты &mdash; от <a>стартапов</a> до <a>Microsoft</a> и <a>SAP</a>
+								<a href="#tf-clients" class="page-scroll">Клиенты</a> &mdash; от стартапов до Microsoft и SAP
 							</li>
 							<li>
 								<!--								<span class="fa fa-check"></span> -->
-								Умеем <a class=hoverExplainer>много технологий
-								<div class=hoverExplainerText><ul>
+								Умеем <a class=hoverExplainer  data-bind="click:$('.techList').show(1000)">много технологий
+								<div class=techList style="display:none">
+								<ul class=nobullets style="    margin-left: 3.4em;    margin-top: 1em;">
 								<li>HTML5 SPA + MVVM</li>
 									<li>Node.JS + MongoDB</li>
 								<li>Python/ Django</li>
@@ -355,7 +356,7 @@
 							<li>
 								<!--<span class="fa fa-check"></span> -->
 								С 2005 года реализовали
-								<a class="hoverExplainer">50+ проектов</a>
+								<a href="#tf-works" class="page-scroll">50+ проектов</a>
 							</li>
 						</ul>
 					</div>
@@ -421,7 +422,7 @@
 				</div>
 			</section>
 			<section class=" text-center  " style="    padding: 100px;">
-				<a href="#tf-contact" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставить заявку</a>
+				<a href="#ContactForm"  data-bind="click:function(){m_site.serviceTypeSelected(null);return true}" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставить заявку</a>
 			</section>
 			<!--			</div>-->
 			<!-- Team Page
@@ -1146,9 +1147,11 @@
 					</div>
 
 				</div>
-				<a href="#tf-contact" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставить заявку</a>
+				<a href="#ContactForm"  data-bind="click:function(){m_site.serviceTypeSelected(null);return true}" style="" class="btn btn-primary btn-lg tf-btn page-scroll"><i class="fa fa-envelope"></i> Оставьте заявку...</a>
+				<div style="    font-weight: 100;    margin-top: 1em;">...или просто позвоните! :)</div>
 			</section>
 		</div>
+<!--
 		<nav id="footer">
 			<div class="container">
 				<div class="pull-right fnav">
@@ -1165,6 +1168,7 @@
 				</div>
 			</div>
 		</nav>
+-->
 
 		<span src="cases/portfolio1.html"></span>
 		<span src="cases/portfolio2.html"></span>

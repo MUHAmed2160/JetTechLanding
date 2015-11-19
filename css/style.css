@@ -81,6 +81,7 @@ p.intro {
 a {
     color: #FDA400;
     /* text-decoration: underline; */
+    cursor:pointer
 }
 
 a:hover,
@@ -1684,7 +1685,7 @@ body.scrolled .project-manager-budget{position:fixed;right: 14px;z-index: 1;}
     background-color: #383331;
     box-shadow: 0px 0px 0px 2px #383331,5px 0px 0px 2px #383331,-5px 0px 0px 2px #383331,7px 3px 0px 2px transparent;
 }
-
+.inlineGrayBg a{color:#fff;/* text-decoration:underline */border-bottom: 1px solid #fff;}
 .project-manager-budget {
     color: #333;
 }
@@ -1789,3 +1790,7 @@ a h3 {
     cursor:pointer
 }
 a:hover h3{}
+
+ul.nobullets li {
+    list-style-type: none!important;
+}
