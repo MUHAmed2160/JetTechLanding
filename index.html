@@ -118,7 +118,7 @@
 								<!--
 								<select data-bind="
 							options: serviceTypes,
-							
+
 							value: serviceTypeSelected,
 							optionsCaption: 'Choose...' " class="form-control">
 								</select>
@@ -130,13 +130,13 @@
 								<label>
 									<input type="checkbox"> Дизайн</label>
 
-							</div>		click:$parent.radio?resetCheck($parent.children):null, 
+							</div>		click:$parent.radio?resetCheck($parent.children):null,
 -->
 
 							<script type="text/html" id="calcGroup">
 								<ul class="list-group form-group" style="    color: #333;    clear: both;" data-bind="foreach:$data">
 									<li class="list-group-item" data-bind="
-									click:$parents[1].radio?m_site.resetCheck($parent):null, 
+									click:$parents[1].radio?m_site.resetCheck($parent):null,
 									toggleClick:checked,
 									css:checked===true || (( typeof checked) =='function' && checked())? 'activecheck':'' ">
 										<i class="fa 1fa-check" data-bind="css:!$parents[1].radio?'fa-check':'fa-circle', style:{ color: ((typeof checked) !=='function')?  ' #666':''} " 1data-bind="css:checked()?'fa-check':'fa-square-o' "></i> <span class="list-group-item-label" data-bind=" text:label"></span>
@@ -302,7 +302,7 @@
                 <div class="col-sm-12 center-block text-center">
                     <form method="get" accept-charset="utf-8" id="nl-form" class="nl-form beta no-underline" action="/submit_new_project">                <span class="text-shadow">Find someone to work on</span>
                     <div class="clearfix visible-xs xs-margin-bottom"></div>
-                    
+
                     <select name="type" id="ProjectType" >
                         <option value="website" selected="selected">a website</option>
                         <option value="app">an app</option>
@@ -1062,21 +1062,26 @@
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
 								<div id="testimonial" class="owl-carousel owl-theme feedback">
+
+									<div class="item">
+										
+										<p class="fbtext">Компания JetTeam выполняла ряд важных и сложных задач на аутсорсинге для проекта Ridero. Хочется отметить высокий уровень компетенции сотрудников, желание работать на результат.
+											Особенно рекомендовал бы для тех, кому необходимо быстро создать mvp ( минимально необходимый продукт). И скорее приступить к работе.</p>
+										<p><strong>Александр Касьяненко</strong>, «Ridero»</p>
+									</div>
+
+									<div class="item">
+										<p class="fbtext">Мы работали с JetTeam над созданием приложения. Текущих банковских ресурсов не хватало, и нам надо было быстро собрать прототип и выпустить рабочее предложение, чтобы протестировать идею.
+											Яков с командой напряглись, чтобы понять, чего же мы на самом деле хотим, сделали прототипы, поправили, собрали рабочее приложение и всё заработало. Теперь как не дай Б-г придёт какая идея - сразу к ним.</p>
+										<p><strong>Борис Дьяконов</strong>, банк «Точка»</p>
+									</div>
+
 									<div class="item">
 										<p class="fbtext">Хочется отметить внимательное отношение ко всем пожеланиям при создании новой системы управления базой недвижимости, сайта компании и мобильного приложения. Отзывчивость и клиентоориентированность оставили приятное впечатление.</p>
 
-										<p><strong>Сухарев Артур</strong>, замгендир по развитию агентства Адвекс, Тюмень.</p>
+										<p><strong>Сухарев Артур</strong>, агентство «Адвекс», Тюмень</p>
 									</div>
 
-									<div class="item">
-										<p class="fbtext">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-										<p>Dean Martin, CEO Acme Inc.</p>
-									</div>
-
-									<div class="item">
-										<p class="fbtext">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-										<p>Dean Martin, CEO Acme Inc.</p>
-									</div>
 								</div>
 							</div>
 						</div>
